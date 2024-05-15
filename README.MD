@@ -1,6 +1,6 @@
 
 # Suntouched
-[Prwview](https://suntouched.co/)
+[Preview](https://suntouched.co/)
 
 About project
 Custom Shopify Development for Suntouched

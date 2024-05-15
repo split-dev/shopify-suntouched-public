@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Meshed Display';
+  src:
+      url('MeshedDisplay-Bold.woff2') format('woff2'),
+      url('MeshedDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Meshed Display';
+  src:
+      url('MeshedDisplay-Regular.woff2') format('woff2'),
+      url('MeshedDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src:
+      url('SFProText-Regular.woff2') format('woff2'),
+      url('SFProText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src:
+      url('SFProText-Light.woff2') format('woff2'),
+      url('SFProText-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src:
+      url('SFProText-Semibold.woff2') format('woff2'),
+      url('SFProText-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src:
+      url('SFProText-Medium.woff2') format('woff2'),
+      url('SFProText-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Queens Var"; src: url("//db.onlinewebfonts.com/t/8394da47a58440fecd3dac306b90b23f.eot");
+  src:
+      url("//db.onlinewebfonts.com/t/8394da47a58440fecd3dac306b90b23f.eot?#iefix") format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/8394da47a58440fecd3dac306b90b23f.woff2") format("woff2"),
+      url("//db.onlinewebfonts.com/t/8394da47a58440fecd3dac306b90b23f.woff") format("woff"),
+      url("//db.onlinewebfonts.com/t/8394da47a58440fecd3dac306b90b23f.ttf") format("truetype"),
+      url("//db.onlinewebfonts.com/t/8394da47a58440fecd3dac306b90b23f.svg#Queens Var") format("svg");
+}

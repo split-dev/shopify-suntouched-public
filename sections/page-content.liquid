@@ -1,0 +1,52 @@
+<section class="page-content">
+    <div class="container">
+         <div class="d-md-flex d-block justify-content-between">
+             <div class="page-content__img-left">
+                 {% if section.settings.image %}
+                     <img class="d-sm-block  {% if section.settings.image_mob %} d-none {% endif %}" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+                 {% endif %}
+                 {% if section.settings.image_mob %}
+                     <img class="d-sm-none d-block" src="{{ section.settings.image_mob | img_url: 'master' }}" alt="{{ section.settings.image_mob.alt }}">
+                 {% endif %}
+             </div>
+             <div class="page-content__inform color-text">
+                 {{ page.content }}
+             </div>
+             <div class="page-content__img-right">
+                 {% if section.settings.image_2 %}
+                     <img src="{{ section.settings.image_2 | img_url: 'master' }}" alt="">
+                 {% endif %}
+             </div>
+         </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Page Content",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image left"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_mob",
+            "label": "Image left mob"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image right"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Page content",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

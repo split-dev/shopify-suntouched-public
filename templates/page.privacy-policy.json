@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "165478887196a581b7": {
+      "type": "top-banner",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/Rectangle_3_e352cd85-ec7a-4786-a2d0-1aaa9b2e623f.png",
+        "img-mobile": "shopify:\/\/shop_images\/Rectangle_6.png",
+        "title": "",
+        "text": "<p>This Privacy Policy describes how suntouched.co (the “Site” or “we”) collects, uses, and discloses your Personal Information when you visit or make a purchase from the Site.<\/p>",
+        "enable-buttons": false,
+        "url": "",
+        "label": "Tutorials",
+        "url-two": "",
+        "label-two": "FAQ"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 8,
+        "padding_bottom": 28
+      }
+    },
+    "1654788411b0ae65dc": {
+      "type": "advantages",
+      "blocks": {
+        "b1281a90-5bc6-47bf-a0b2-8044780ffabf": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_300b9274-4349-45ce-b2f4-e823584b2161.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_0e8795dc-ef5b-4bb5-8345-e8096c8ff7cf.png",
+            "text": "1% For The Planet"
+          }
+        },
+        "afa3250f-1a0c-432c-8087-87f462b00315": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_e8066d8a-fe83-48c2-9a69-d56ed69bc58f.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_0d7eb4a0-7f51-4103-96b9-ab8000e6324e.png",
+            "text": "Made for Light & Dark Hair"
+          }
+        },
+        "21df7e08-18fb-4d73-b949-0cd06446c8d9": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_5ad19353-77bf-45d2-a3b4-89fc8662b7b6.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_8f8204d3-d6e1-4c74-a040-3c208ed97a0b.png",
+            "text": "Clean Ingredients"
+          }
+        },
+        "c5f45dc3-8213-4860-944f-64585f81a117": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_c3194240-a09f-4397-8efb-b86d66585b83.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_c0111bb3-a887-4882-a40c-36891382c9a6.png",
+            "text": "Hair Care Infused"
+          }
+        }
+      },
+      "block_order": [
+        "b1281a90-5bc6-47bf-a0b2-8044780ffabf",
+        "afa3250f-1a0c-432c-8087-87f462b00315",
+        "21df7e08-18fb-4d73-b949-0cd06446c8d9",
+        "c5f45dc3-8213-4860-944f-64585f81a117"
+      ],
+      "settings": {
+        "enable-buttons": false,
+        "link": "",
+        "link_text": ""
+      }
+    }
+  },
+  "order": [
+    "165478887196a581b7",
+    "main",
+    "1654788411b0ae65dc"
+  ]
+}

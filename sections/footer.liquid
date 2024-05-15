@@ -1,0 +1,295 @@
+<div class="footer">
+  <div class="footer__logo">
+    <div class="container-small">
+      <div class="footer__logo-position">
+        {{ section.settings.footer-logo }}
+      </div>
+    </div>
+  </div>
+  <div class="footer__line">
+    <div class="ticker__position marquee" data-duplicated='true'>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+      <h6>{{ section.settings.word-one }}</h6>
+      <h6>{{ section.settings.word-two }}</h6>
+    </div>
+  </div>
+  <div class="footer__wrapper ">
+    <div class="container-small d-flex flex-wrap">
+      <div class="footer__wrapper-left">
+        <div class="footer__form">
+          <p class="text-18px-all mt-0 color-text font-weight-medium">
+            {{ section.settings.form-title }}
+          </p>
+          {% form 'customer', class: 'newsletter-form' %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="footer__field-wrapper">
+              <div class="field footer__form-box">
+                <input
+                        id="NewsletterForm--{{ section.id }}"
+                        type="email"
+                        name="contact[email]"
+                        class="field__input"
+                        value="{{ form.email }}"
+                        aria-required="true"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        {% if form.errors %}
+                          autofocus
+                          aria-invalid="true"
+                          aria-describedby="Newsletter-error--{{ section.id }}"
+                          {% elsif form.posted_successfully? %}
+                          aria-describedby="Newsletter-success--{{ section.id }}"
+                        {% endif %}
+                        placeholder="{{ 'newsletter.label' | t }}"
+                        required
+                >
+                <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  {{ 'newsletter.label' | t }}
+                </label>
+                <button type="submit" class="newsletter-form__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.5875 8.33263L2.0875 0.0826268C1.95818 0.0179519 1.81292 -0.00796197 1.66921 0.00800564C1.52551 0.0239732 1.38948 0.0811415 1.2775 0.172627C1.17057 0.262246 1.09076 0.379917 1.04704 0.51241C1.00331 0.644903 0.997416 0.786965 1.03 0.922627L3.25 9.00013L1 17.0551C0.969425 17.1684 0.965855 17.2873 0.989583 17.4022C1.01331 17.5171 1.06367 17.6249 1.13662 17.7168C1.20957 17.8087 1.30307 17.8822 1.4096 17.9315C1.51614 17.9807 1.63273 18.0042 1.75 18.0001C1.86741 17.9994 1.98301 17.9712 2.0875 17.9176L18.5875 9.66763C18.7104 9.60469 18.8135 9.50907 18.8854 9.39129C18.9574 9.27352 18.9955 9.13816 18.9955 9.00013C18.9955 8.86209 18.9574 8.72674 18.8854 8.60896C18.8135 8.49119 18.7104 8.39557 18.5875 8.33263ZM2.9125 15.8326L4.57 9.75013H11.5V8.25013H4.57L2.9125 2.16763L16.57 9.00013L2.9125 15.8326Z" fill="#1E1E1E"/>
+                  </svg>
+                </button>
+              </div>
+              {%- if form.errors -%}
+                <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+              {%- endif -%}
+            </div>
+            {%- if form.posted_successfully? -%}
+              <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+            {%- endif -%}
+          {% endform %}
+          <span class="d-block mt-4 font-weight-medium text-12px color-text">{{ section.settings.form-text }}</span>
+        </div>
+        <div class="footer__social">
+          <p class="text-18px-all mt-0 color-text font-weight-medium">{{ section.settings.footer-social-title }}</p>
+          <ul class="footer__list-social list-unstyled list-social d-flex flex-wrap" role="list">
+            {%- if settings.social_twitter_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
+                  {%- render 'icon-twitter' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_facebook_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                  {%- render 'icon-facebook' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_pinterest_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+                  {%- render 'icon-pinterest' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_instagram_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                  {%- render 'icon-instagram' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_tiktok_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+                  {%- render 'icon-tiktok' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_tumblr_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+                  {%- render 'icon-tumblr' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_snapchat_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+                  {%- render 'icon-snapchat' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_youtube_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+                  {%- render 'icon-youtube' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+            {%- if settings.social_vimeo_link != blank -%}
+              <li class="list-social__item">
+                <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+                  {%- render 'icon-vimeo' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                </a>
+              </li>
+            {%- endif -%}
+          </ul>
+        </div>
+      </div>
+      <div class="footer__menu d-flex flex-wrap">
+        {% for block in section.blocks %}
+          <div class="footer__list">
+            <ul>
+              <li class="font-weight-bold text-18px color-text">{{ linklists[block.settings.link_list].title }}</li>
+              {% for link in linklists[block.settings.link_list].links %}
+                <li><a class="link-menu text-14px color-text font-weight-medium text-uppercase " href="{{ link.url }}">{{ link.title | escape }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+        {% if section.settings.img %}
+          <div class="d-flex align-items-end">
+            <img src="{{ section.settings.img | img_url: '200x' }}" alt="{{ section.settings.img.alt }}">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container-small d-flex align-items-center justify-content-between">
+      <div class="footer__bottom-links">
+        <a class="mr-3" href="{{ section.settings.bottom-url-one }}">{{ section.settings.bottom-label-one }}</a>
+        <a href="{{ section.settings.bottom-url-two }}">{{ section.settings.bottom-label-two }}</a>
+      </div>
+      <div class="footer__bottom-text">
+        <p class="m-0">© {{ 'now' | date: '%Y' }} - Suntouched Hair Inc.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+  "name": "Footer",
+  "tag": "footer",
+  "settings": [
+  {
+    "type": "html",
+    "id": "footer-logo",
+    "label": "Logo SVG Code"
+  },
+  {
+    "type": "header",
+    "content": "Footer Ticker"
+  },
+  {
+    "type": "text",
+    "id": "word-one",
+    "label": "Word in Ticker",
+    "default": "  &nbsp;&nbsp;Suntouched&nbsp;&nbsp;    •"
+  },
+  {
+    "type": "text",
+    "id": "word-two",
+    "label": "  Word in Ticker",
+    "default": " &nbsp;&nbsp;Sunshine in a bottle &nbsp;&nbsp;   •"
+  },
+  {
+    "type": "header",
+    "content": "Footer Form"
+  },
+  {
+    "type": "text",
+    "id": "form-title",
+    "label": "Form Title",
+    "default": "Join the Suntouched Fam"
+  },
+  {
+    "type": "text",
+    "id": "form-text",
+    "label": "Form some text",
+    "default": "Join the thousands of women around the globe who receive our best discounts, new videos and self-care tips every week. Enter your email to join the Suntouched fam now!"
+  },
+  {
+    "type": "header",
+    "content": "Footer Social"
+  },
+  {
+    "type": "text",
+    "id": "footer-social-title",
+    "label": "Footer Social Title",
+    "default": "Keep in touch"
+  },
+  {
+    "type": "header",
+    "content": "Footer Menu"
+  },
+  {
+    "type": "image_picker",
+    "id": "img",
+    "label": "Some Image"
+  },
+  {
+    "type": "header",
+    "content": "Footer bottom"
+  },
+  {
+    "type": "text",
+    "id": "bottom-label-one",
+    "label": "Footer links title",
+    "default": "Terms of Service"
+  },
+  {
+    "type": "url",
+    "id": "bottom-url-one",
+    "label": "Footer bottom links URL"
+  },
+  {
+    "type": "text",
+    "id": "bottom-label-two",
+    "label": "Footer links title",
+    "default": "Privacy Policy"
+  },
+  {
+    "type": "url",
+    "id": "bottom-url-two",
+    "label": "Footer bottom links URL"
+  }
+  ],
+  "blocks": [
+  {
+  "type": "link_list",
+  "limit": 3,
+  "name": "Link List",
+  "settings": [
+  {
+  "type": "link_list",
+  "id": "link_list",
+  "label": "Choose a link list"
+  }
+  ]
+  }
+  ]
+  }
+{% endschema %}

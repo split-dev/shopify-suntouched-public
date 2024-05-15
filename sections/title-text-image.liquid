@@ -1,0 +1,35 @@
+<section class="container title-text-image">
+    <div class="title-text-image__title">
+        <h3 class="h2 mt-0 text-center">{{ section.settings.title }}</h3>
+    </div>
+    <div class="title-text-image__img">
+        {% if section.settings.image %}
+            <img class="d-flex mx-auto" src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Title and text in image",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Title and text in image",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

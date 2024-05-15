@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "1654545015f9fda254": {
+      "type": "top-banner",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/Rectangle_3_4da08721-61d6-4fd5-82f0-aa45337c1cf0.png",
+        "img-mobile": "shopify:\/\/shop_images\/Rectangle_7_939fae16-46d7-41c4-a9e1-82d1d3e80775.png",
+        "title": "",
+        "text": "",
+        "enable-buttons": false,
+        "url": "",
+        "label": "Tutorials",
+        "url-two": "",
+        "label-two": "FAQ"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 72,
+        "padding_bottom": 60
+      }
+    },
+    "1654545228897a92e7": {
+      "type": "advantages",
+      "blocks": {
+        "0dd19d47-a759-4e52-8662-f08ccb3a3558": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Group.png",
+            "hover-img": "shopify:\/\/shop_images\/Group_3a65b038-fa7b-4d12-9c87-43906b5a75d7.png",
+            "text": "1% For The Planet"
+          }
+        },
+        "6c0c7dbd-04d3-444f-9dd5-02f6cfa02982": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_c87293f8-a8b7-47ad-9f05-a56b7fcb6849.png",
+            "text": "Made for Light & Dark Hair"
+          }
+        },
+        "153b5475-86c3-4a5e-83f8-d5fee97484ec": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_5ad19353-77bf-45d2-a3b4-89fc8662b7b6.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_8f8204d3-d6e1-4c74-a040-3c208ed97a0b.png",
+            "text": "Clean Ingredients"
+          }
+        },
+        "0fd4b8fb-222c-4f20-a97c-bdfc4c819af4": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_c3194240-a09f-4397-8efb-b86d66585b83.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_c0111bb3-a887-4882-a40c-36891382c9a6.png",
+            "text": "Hair Care Infused"
+          }
+        }
+      },
+      "block_order": [
+        "0dd19d47-a759-4e52-8662-f08ccb3a3558",
+        "6c0c7dbd-04d3-444f-9dd5-02f6cfa02982",
+        "153b5475-86c3-4a5e-83f8-d5fee97484ec",
+        "0fd4b8fb-222c-4f20-a97c-bdfc4c819af4"
+      ],
+      "settings": {
+        "enable-buttons": false,
+        "link": "",
+        "link_text": ""
+      }
+    }
+  },
+  "order": [
+    "1654545015f9fda254",
+    "main",
+    "1654545228897a92e7"
+  ]
+}

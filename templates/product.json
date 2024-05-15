@@ -1,0 +1,193 @@
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "3ab17c41-b4cf-451f-9573-b2b6c6fd2f7c": {
+          "type": "popup",
+          "settings": {
+            "text": "Color Chart",
+            "page": "hair-color-chart"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "0f62696a-befc-4a59-8a95-4e61ad703676": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "3ab17c41-b4cf-451f-9573-b2b6c6fd2f7c",
+        "variant_picker",
+        "0f62696a-befc-4a59-8a95-4e61ad703676"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail",
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "img": "shopify:\/\/shop_images\/summer-time_1.png",
+        "text": "30-Day Money Back Guarantee",
+        "img_1": "shopify:\/\/shop_images\/skin-care_1.png",
+        "text_1": "Clean Beauty",
+        "img_2": "shopify:\/\/shop_images\/cruelty-free_1.png",
+        "text_2": "Vegan & Cruelty-Free",
+        "img_3": "shopify:\/\/shop_images\/airplane_1.png",
+        "text_3": "Shipping Worldwide",
+        "text_bottom": "Available for preorder. Estimated delivery: July 15-30, 2022",
+        "result-button-label": "See Results"
+      }
+    },
+    "1655384095e81b04a6": {
+      "type": "product-tabs",
+      "blocks": {
+        "781191e3-d335-4ba1-8cf6-31dcf9986126": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/paraben-free_0a8073ca-4a6f-40a5-b5e7-3cd38b7103dd.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_3e6d4723-0723-41af-8a07-c381ef5768f5.png",
+            "text": "Paraben Free"
+          }
+        },
+        "d0faff39-3a06-44ed-8ab6-5d2ec1f00dbd": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_5483a77d-0a33-4e30-9aa4-a27e3c46bed6.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_456d01c3-1e29-41fa-9c92-b32a23bcfb9a.png",
+            "text": "Not Tested On Animals"
+          }
+        },
+        "76afe672-c80f-4a9b-a20f-1443c3cb4517": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/nature-product.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_8eb77e4e-012a-4601-9a7a-b79c2072c326.png",
+            "text": "Vegan"
+          }
+        },
+        "dc3fa94e-574d-4ca1-8be6-327e238324b5": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/no-sulfate.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_14efe1d7-29e3-4ae8-bf2b-50c0afa92709.png",
+            "text": "No Harmful Sulfates"
+          }
+        },
+        "34bfc6cf-3dd0-4e68-8f44-5d821ba514ef": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/alcohol-free.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_3159d419-76d7-42fe-a26f-5dc0b25f5da9.png",
+            "text": "Alcohol Free"
+          }
+        }
+      },
+      "block_order": [
+        "781191e3-d335-4ba1-8cf6-31dcf9986126",
+        "d0faff39-3a06-44ed-8ab6-5d2ec1f00dbd",
+        "76afe672-c80f-4a9b-a20f-1443c3cb4517",
+        "dc3fa94e-574d-4ca1-8be6-327e238324b5",
+        "34bfc6cf-3dd0-4e68-8f44-5d821ba514ef"
+      ],
+      "settings": {
+        "title": "Who It’s For",
+        "title_2": "How to Use",
+        "title_3": "Only Good Stuff",
+        "title_4": "Key Ingredients",
+        "title_5": "Ingredients",
+        "title_6": "Bundle & Save 20%"
+      }
+    },
+    "1654778849382b4159": {
+      "type": "product-reviews",
+      "blocks": {
+        "876f9e5a-df9b-4257-add5-a0c896303b76": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_27_d88ea6ca-7ff6-4562-a0fc-99717a780fa8.jpg",
+            "name": "- Mollie Mae, Verified Customer",
+            "text": "<p>“I'm in love with Suntouched and my new beachy highlights. The results I've had from just one bottle are insane, I keep getting complimented on my hair. I have just gotten two more to build up to an even lighter color. I swear by this product, I now tell everyone about it!”<\/p>"
+          }
+        },
+        "fbabbe38-a902-46a9-93ff-00dcf4c5ae09": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_27_d617c8ec-56f2-4268-bb91-ced15dd95cb4.jpg",
+            "name": "- Meliza Johnson, Verified Customer",
+            "text": "<p>\"Love this! It is gentle on your hair, smells great, and is super easy to get results. I will never dye my hair again! Now I can have surfing beach highlights all year long! I have Filipina thick almost black hair. As you can see from the photo, it has definitely lifted in color. What a you waiting for? Order your bottle(s) ASAP<\/p>"
+          }
+        },
+        "087eb45e-b023-4f74-a932-76d4e7c4318f": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_27_f5f217b7-fffd-4d19-a96d-12eff4e848a2.jpg",
+            "name": "- Monica Skinner Perez, Verified Customer",
+            "text": "<p>\"Just wow! Excellent results, I'm so impressed! Had a good feeling about this hair lightener but would never imagine the amazing result in just one day! I sprayed the product on my hair for a day at the beach, and you can see the color results in the picture! So so happy with this product!\"<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "876f9e5a-df9b-4257-add5-a0c896303b76",
+        "fbabbe38-a902-46a9-93ff-00dcf4c5ae09",
+        "087eb45e-b023-4f74-a932-76d4e7c4318f"
+      ],
+      "settings": {
+        "title": "Real results, Real customers"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "label-button": "All products",
+        "url-button": "shopify:\/\/collections\/shop-all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "columns_mobile": "2"
+      }
+    },
+    "165477837548682414": {
+      "type": "ticker",
+      "settings": {
+        "color": "#1e1e1e",
+        "color-text": "#ffffff",
+        "word-one": "  Suntouched      •",
+        "word-two": "  Sunshine in a bottle      •"
+      }
+    },
+    "16552219328c6be2f7": {
+      "type": "customer-reviews",
+      "settings": {
+        "title": "Customer Reviews"
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {}
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "main",
+    "1655384095e81b04a6",
+    "1654778849382b4159",
+    "product-recommendations",
+    "165477837548682414",
+    "16552219328c6be2f7",
+    "zp-product-footer-content"
+  ]
+}

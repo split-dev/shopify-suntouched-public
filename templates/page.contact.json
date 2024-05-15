@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "contact",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_8.png",
+        "text": "<p>For inquiries, or anything under the sun<\/p>",
+        "link": "",
+        "link_text": "Get in touch",
+        "title": "Address",
+        "text_social": "<p>313-3111 34 Avenue NW Calgary, AB T2L 0Y2<\/p>",
+        "title_2": "Email",
+        "text_social_2": "<p>support@suntouched.co<\/p>",
+        "title_3": "Keep in touch"
+      }
+    },
+    "1653482026e9df2f15": {
+      "type": "inst-block",
+      "settings": {
+        "title": "Join the Suntouched family on IG",
+        "inst": "@suntouched"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1653482026e9df2f15"
+  ]
+}

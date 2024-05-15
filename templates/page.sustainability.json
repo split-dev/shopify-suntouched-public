@@ -1,0 +1,253 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1654356635177e202f": {
+      "type": "top-banner",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/Rectangle_3.jpg",
+        "img-mobile": "shopify:\/\/shop_images\/Rectangle_4.jpg",
+        "title": "For freer you and healthier planet",
+        "text": "<p>Together we're doing better for the environment and your hair, one bottle at a time<\/p>",
+        "enable-buttons": false,
+        "url": "",
+        "label": "Tutorials",
+        "url-two": "",
+        "label-two": "FAQ"
+      }
+    },
+    "16544492378fbc2df5": {
+      "type": "page-content",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_64.png",
+        "image_mob": "shopify:\/\/shop_images\/Group_63.png",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_8_5e4a116b-0eed-40dc-ad46-1f449a02e30f.jpg"
+      }
+    },
+    "16566350144aed0a8f": {
+      "type": "rich-text",
+      "blocks": {
+        "1656635014cc846982-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Products for today, mindful of the future",
+            "heading_size": "h1"
+          }
+        },
+        "1656635014cc846982-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a business, it's our responsibility to operate in a way that doesn't harm our planet. That's why each bottle of Suntouched is BPA-free and packaged using recycled materials. Once you’ve used your bottle of sunshine to the last drop, simply place it in your recycling bin as it's 100% recyclable, or use one of our tips below to reuse your bottle!<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1656635014cc846982-0",
+        "1656635014cc846982-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1654624945b0856f53": {
+      "type": "advantages-mod",
+      "blocks": {
+        "7d1cf0fe-bbc3-4138-8625-45ed26012991": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/paraben-free_0a8073ca-4a6f-40a5-b5e7-3cd38b7103dd.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_3e6d4723-0723-41af-8a07-c381ef5768f5.png",
+            "text": "Paraben Free"
+          }
+        },
+        "caed296d-38db-4699-b692-40caf26dd8e6": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Property_1_default_5483a77d-0a33-4e30-9aa4-a27e3c46bed6.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_456d01c3-1e29-41fa-9c92-b32a23bcfb9a.png",
+            "text": "Not Tested On Animals"
+          }
+        },
+        "8b1f0945-455a-42c0-9690-4c3d9eaf993a": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/nature-product.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_8eb77e4e-012a-4601-9a7a-b79c2072c326.png",
+            "text": "Vegan"
+          }
+        },
+        "d0bb08d1-9a19-42d7-80fe-193bf9356173": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/no-sulfate.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_14efe1d7-29e3-4ae8-bf2b-50c0afa92709.png",
+            "text": "No Harmful Sulfates"
+          }
+        },
+        "950ff966-3de7-4b0c-887a-eb597645bade": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/alcohol-free.png",
+            "hover-img": "shopify:\/\/shop_images\/Property_1_hovering_3159d419-76d7-42fe-a26f-5dc0b25f5da9.png",
+            "text": "Alcohol Free"
+          }
+        }
+      },
+      "block_order": [
+        "7d1cf0fe-bbc3-4138-8625-45ed26012991",
+        "caed296d-38db-4699-b692-40caf26dd8e6",
+        "8b1f0945-455a-42c0-9690-4c3d9eaf993a",
+        "d0bb08d1-9a19-42d7-80fe-193bf9356173",
+        "950ff966-3de7-4b0c-887a-eb597645bade"
+      ],
+      "settings": {
+        "enable-buttons": false,
+        "title": "We use only the good stuff",
+        "link": "shopify:\/\/collections\/shop-all",
+        "link_text": "view our products"
+      }
+    },
+    "165463044372f0c46e": {
+      "type": "title-text-and-images",
+      "blocks": {
+        "d9151689-9b44-413d-952c-90147cc40541": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_27_c296a006-a535-4f83-b553-b2d4675f634d.jpg",
+            "text": "Spray bottle for your plant babies"
+          }
+        },
+        "d4f5523a-5505-4286-8861-1855924b1b26": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_27_4fba2e1e-6be8-45eb-82bb-3c8bd69f4047.jpg",
+            "text": "DIY beach wave spray using salt & water"
+          }
+        },
+        "deab07c2-5ab7-4683-acc9-700f2a6c23a1": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_27.jpg",
+            "text": "Make homemade house cleaner using water, vinegar & essential oils"
+          }
+        }
+      },
+      "block_order": [
+        "d9151689-9b44-413d-952c-90147cc40541",
+        "d4f5523a-5505-4286-8861-1855924b1b26",
+        "deab07c2-5ab7-4683-acc9-700f2a6c23a1"
+      ],
+      "settings": {
+        "title": "How to reuse your Suntouched Bottle"
+      }
+    },
+    "16566352503da77eb7": {
+      "type": "rich-text",
+      "blocks": {
+        "16566352509fbd3830-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Going beyond the standards, to give more than we take",
+            "heading_size": "h1"
+          }
+        },
+        "16566352509fbd3830-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sustainability of a brand isn't only about the packaging and ingredients or even what happens after people buy our products. It's about meeting the needs of today without compromising our planet's future. That's why on top of creating planet-conscious products, we're also making up for what we took while creating them.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16566352509fbd3830-0",
+        "16566352509fbd3830-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1654591586ba3356bb": {
+      "type": "text-image",
+      "settings": {
+        "title": "How we’re giving back...",
+        "text": "<p>Our ocean is home to up to 80% if all life on Earth and produces 50-<br\/>80% of oxygen and absorbs four times the amount of CO2 as the Amazon Rainforest. Currently, it is filled with as much as 511 trillion microplastic particles - 500 times more than stars in our galaxy.<br\/><br\/>Suntouched has committed 5% of profit to go towards the organization Seaspiracy to help save the ocean.<\/p>",
+        "link": "shopify:\/\/products\/suntouched",
+        "link_text": "Try Suntouched now",
+        "image": "shopify:\/\/shop_images\/IMG_0391.jpg",
+        "enable-buttons": false
+      }
+    },
+    "165459193739f5f500": {
+      "type": "image-center-logo",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1_for_the_planet_blog-01.png",
+        "image-mob": "shopify:\/\/shop_images\/1_for_the_planet_blog-01.png"
+      }
+    },
+    "165460978583300936": {
+      "type": "home-reviews",
+      "blocks": {
+        "e09ecb91-ddfe-466b-9492-b34bc85fa294": {
+          "type": "text",
+          "settings": {
+            "product": "best-friend-bundle",
+            "name": "Marie",
+            "topic": "In love 😍",
+            "text": "<p>Thank you si much ! I was blond when i was younger. Si happy to be back to this amazing color. I bought the lighter one.<br\/>My result after 3 aplications (and some hours under the sun).<\/p>"
+          }
+        },
+        "8b68d00c-83b1-4c7d-8510-26f82d173a34": {
+          "type": "text",
+          "settings": {
+            "product": "suntouched-hair-lightener-for-dark-hair",
+            "name": "Marie",
+            "topic": "In love 😍",
+            "text": "<p>Thank you si much ! I was blond when i was younger. Si happy to be back to this amazing color. I bought the lighter one.<br\/>My result after 3 aplications (and some hours under the sun).<\/p>"
+          }
+        },
+        "7ed6ff6f-5917-492f-b187-f108ed576de9": {
+          "type": "text",
+          "settings": {
+            "product": "suntouched-toning-purple-mask",
+            "name": "Marie",
+            "topic": "In love 😍",
+            "text": "<p>Thank you si much ! I was blond when i was younger. Si happy to be back to this amazing color. I bought the lighter one.<br\/>My result after 3 aplications (and some hours under the sun).<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e09ecb91-ddfe-466b-9492-b34bc85fa294",
+        "8b68d00c-83b1-4c7d-8510-26f82d173a34",
+        "7ed6ff6f-5917-492f-b187-f108ed576de9"
+      ],
+      "settings": {
+        "title": "Let Customers Speak for Us"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1654356635177e202f",
+    "16544492378fbc2df5",
+    "16566350144aed0a8f",
+    "1654624945b0856f53",
+    "165463044372f0c46e",
+    "16566352503da77eb7",
+    "1654591586ba3356bb",
+    "165459193739f5f500",
+    "165460978583300936"
+  ]
+}

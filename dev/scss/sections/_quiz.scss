@@ -1,0 +1,415 @@
+.whai-pagination {
+  display: none;
+}
+
+.whai-slide-question {
+  height: 100%;
+}
+
+.whai-slide-button {
+  padding: 15px 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 204px;
+  min-height: 54px;
+  background-color: $c-gold;
+  color: $c-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: solid 1px $c-gold;
+  text-decoration: none;
+
+}
+
+.whai-slide-button:hover {
+  border: 1px solid #1E1E1E;
+  background-color: #fff !important;
+  opacity: 1;
+}
+
+.img-wrapper {
+  width: 104px;
+  margin: 10px auto 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .img-wrapper {
+    width: 88px;
+    margin: 10px auto 4px;
+    min-height: 100%;
+  }
+
+  .slide-2 .img-wrapper {
+    width: 48px;
+  }
+
+  .slide-2 .whai-image-option {
+    max-width: calc(122px - 30px);
+  }
+
+  .slide-2 {
+    padding: 10px 0 40px !important;
+  }
+
+  .whai-fullscreen-quiz .whai-column h2 {
+    font-size: 26px !important;
+    line-height: 138.7% !important;
+  }
+
+  .whai-image-option.images span {
+    font-size: 14px !important;
+    line-height: 150% !important;
+    font-weight: 600 !important;
+  }
+
+  .whai-slide {
+    padding: 10px 0 40px !important;
+  }
+
+  .active-slide-7 {
+    margin-top: -75px;
+  }
+
+  #askwhai-root {
+    min-height: 100% !important;
+  }
+}
+
+
+.whai-recommendations-slide .whai-column:first-child {
+  display: none;
+}
+
+.whai-image-option.images span {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144.34%;
+  text-align: center;
+  color: #1E1E1E !important;
+  background: none !important;
+}
+
+.whai-brand {
+  display: none;
+}
+
+.whai-pagination-actions {
+  flex-direction: column-reverse;
+}
+
+.whai-pagination-actions button {
+  margin-top: 30px;
+  padding: 15px 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 204px;
+  min-height: 54px;
+  background-color: #fff;
+  color: $c-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: solid 1px #fff;
+  text-decoration: none;
+}
+
+.whai-pagination-actions button:hover {
+  border: 1px solid #1E1E1E;
+  opacity: 1 !important;
+}
+
+.whai-pagination-actions h5 {
+  background: #FFFFFF;
+  border-radius: 48px;
+  padding: 4px 17px 5px 20px;
+  max-width: 50px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: rgba(30, 30, 30, 0.8) !important;
+  margin: 0 auto;
+}
+
+.quiz-logo-container {
+  display: none;
+}
+
+.list-element {
+  max-width: 710px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list-element .list button {
+  background: #FFFFFF !important;
+  border-radius: 69px;
+  border: none;
+  padding: 10px 28px;
+  max-width: 200px;
+  width: auto;
+}
+
+.list-element .list button span {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #1E1E1E;
+}
+
+.list-element .list .whai-text-option {
+  margin: 0 10px 16px 0;
+}
+
+
+.list-element .list .whai-text-option:hover:not(:disabled) {
+  background: #F4DD94 !important;
+  opacity: 1;
+}
+
+.list-element .list .active {
+  background: #F4DD94 !important;
+}
+
+.list-element .whai-column-button button {
+  padding: 15px 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 204px;
+  min-height: 54px;
+  background-color: $c-gold;
+  color: $c-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: solid 1px $c-gold;
+  text-decoration: none;
+}
+
+.list-element .whai-column-button .whai-slide-button:hover {
+  border: 1px solid #1E1E1E;
+  background-color: #fff;
+}
+
+
+.block-info .whai-question {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #1E1E1E;
+  margin-bottom: 18px;
+}
+
+.block-info .whai-subtitle {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #1E1E1E;
+}
+
+.block-info .list .whai-text-option {
+  margin: 10px 22px;
+}
+
+.block-info .whai-column button {
+  max-width: 100%;
+  width: auto;
+  background: #F4DD94 !important;
+  border: 1px solid #F4DD94;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1E1E1E !important;
+}
+
+.block-info .whai-column button:nth-last-child(1) {
+  background: #FFFFFF!important;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 23px !important;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1E1E1E !important;
+  border: 1px solid #fff;
+}
+
+.block-info .whai-column button:hover {
+  border: 1px solid #1E1E1E;
+  background-color: #fff !important;
+  opacity: 1;
+}
+
+.block-info .whai-column button:nth-last-child(1):hover {
+  border: 1px solid #1E1E1E;
+  opacity: 1;
+}
+
+
+.active-slide-email .whai-subtitle {
+  display: none;
+}
+
+.active-slide-email h2 {
+  display: none;
+}
+
+
+.whai-fullscreen-quiz .whai-column h2 {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #1E1E1E;
+  max-width: 524px;
+  width: 100%;
+}
+
+.whai-fullscreen-quiz .whai-column-inputs input {
+  background: #FFFFFF;
+  border: 1px solid #1E1E1E;
+  width: 411px;
+  height: 54px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: left;
+  color: #727272;
+  display: flex;
+  margin: 12px auto 24px;
+}
+
+
+.whai-column-inputs label {
+  display: none;
+}
+
+.whai-recommendations-slide .whai-column h2 {
+  font-family: 'Meshed Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #1E1E1E;
+}
+
+.whai-recommendations-slide .whai-column p {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #1E1E1E;
+  margin-top: 13px;
+  max-width: 588px;
+  padding: 0 15px;
+}
+
+
+.whai-product  {
+  max-width: 329px;
+  width: 100%!important;
+  max-height: 100%!important;
+  position: relative;
+}
+
+.whai-product .img {
+  width: 329px !important;
+  height: 100% !important;
+  max-height: 100%!important;
+}
+
+.whai-product .img-wrapper {
+  max-width: 329px;
+  width: 100%!important;
+  max-height: 100%!important;
+}
+
+.whai-product .product-title {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1E1E1E;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.whai-product .shop-quantity {
+  display: none;
+}
+
+.whai-product .price {
+  padding-top: 8px;
+  border-top: 1px solid #1E1E1E;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1E1E1E;
+  display: flex;
+}
+
+.whai-product .cart-buttons button {
+  font-family: "SF Pro Text" !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #1E1E1E;
+  border: none !important;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 0 0 0 10px;
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+}
+
+
+
+

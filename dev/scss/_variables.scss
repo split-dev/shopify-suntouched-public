@@ -1,0 +1,34 @@
+// --------------------------------------------------
+// Type
+
+
+// --------------------------------------------------
+// Colors
+$c-gold: c_rgb(var(--color-base-accent-1));
+$c-orange: c_rgb(var(--color-base-accent-2));
+$c-blue: c_rgb(var(--color-base-background-2));
+$c-text: c_rgb(var(--color-base-text));
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1431px,
+);
+
+$container-max-widths: (
+  sm: 1398px,
+  md: 1399px,
+  lg: 1400px,
+  xl: 1401px,
+);
+
+
+
+// Box shadows
+$shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+$shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.05);
+$shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.05);
+$shadow-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$shadow-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);

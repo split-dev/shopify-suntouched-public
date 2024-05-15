@@ -1,0 +1,116 @@
+.cta {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 102px 0 124px;
+  @include media-breakpoint-down(sm) {
+    padding: 124px 0;
+  }
+  &:before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 101px;
+    color: #fff;
+    margin-bottom: 42px;
+    @include media-breakpoint-down(sm) {
+      max-width: 300px;
+      font-size: 42px;
+      line-height: 110%;
+      margin-bottom: 32px
+    }
+  }
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+  }
+}
+.cta-form {
+  &:before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    max-width: 700px;
+    color: #fff;
+    margin-bottom: 42px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 32px;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 138.7%;
+    }
+  }
+  &__form {
+    form {
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+      .cta-form__input {
+        width: 100%;
+        font-size: 14px;
+        color: #727272;
+        height: 52px !important;
+        border-left: 1px solid #7A8D92;
+        border-top: 1px solid #7A8D92;
+        border-bottom: 1px solid #7A8D92;
+        background-color: #FCF8F0;
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+      label {
+        font-size: 12px !important;
+        font-weight: 500;
+        top: 18px;
+      }
+      button {
+        margin-top: 1px;
+        margin-left: -1px;
+        width: 52px;
+        height: 52px;
+        background-color: #FCF8F0;
+        border: 1px solid #7A8D92;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: #dbd6cc;
+        }
+      }
+    }
+  }
+  &__form-box {
+    width: 400px;
+    min-width: 400px;
+    border: none !important;
+    @include media-breakpoint-down(xs) {
+      max-width: 100%;
+      width: 100%;
+      min-width: 100%;
+    }
+    &:after {
+      content: none !important;
+    }
+  }
+}

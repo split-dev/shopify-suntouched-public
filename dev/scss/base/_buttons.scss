@@ -1,0 +1,110 @@
+.button {
+  &__gold {
+    padding: 15px 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 204px;
+    min-height: 54px;
+    background-color: $c-gold;
+    color: $c-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: solid 1px $c-gold;
+    text-decoration: none;
+    &:hover {
+      border: solid 1px $c-text;
+      background-color: #fff;
+    }
+  }
+  &__white {
+    padding: 15px 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 204px;
+    min-height: 54px;
+    background-color: #fff;
+    color: $c-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: solid 1px #fff;
+    text-decoration: none;
+    &:hover {
+      border: solid 1px $c-text;
+    }
+  }
+  &__round {
+    padding: 10px 15px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 140px;
+    min-height: 44px;
+    background-color: #fff;
+    color: $c-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 1px solid #F4DD94;
+    border-radius: 69px;
+    text-decoration: none;
+    &:hover {
+      background-color: #F4DD94;
+    }
+  }
+  &__transparent {
+    padding: 15px 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 204px;
+    min-height: 54px;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: solid 1px #fff;
+    text-decoration: none;
+    &:hover {
+      border: solid 1px $c-gold;
+      color: $c-gold;
+    }
+  }
+  &__article {
+    padding: 10px 15px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 204px;
+    min-height: 44px;
+    background-color: #fff;
+    color: $c-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 1px solid #1E1E1E;
+    &:hover {
+      border: solid 1px #DDA101;
+      color: #DDA101;
+    }
+  }
+}

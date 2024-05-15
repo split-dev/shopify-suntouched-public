@@ -1,0 +1,51 @@
+<section class="small-inform container-small w-100 position-relative d-flex justify-content-between {% if section.settings.enable-buttons %}inform__mob-bottom small-inform__img-right{% else %}small-inform__mob-top flex-row-reverse{% endif %}">
+    <div class="d-flex align-items-center color-text">
+        <div class="small-inform__content {% if section.settings.enable-buttons %}small-inform__padding-right{% else %}small-inform__padding-left{% endif %}">
+            <h3 class="h1 inform__title">{{ section.settings.title }}</h3>
+            <div class="text-16px inform__text">{{ section.settings.text }}</div>
+        </div>
+    </div>
+    <div class="{% if section.settings.enable-buttons %}inform__right{% else %}inform__left{% endif %}">
+        <div class="small-inform__img d-flex {% if section.settings.enable-buttons %}justify-content-end{% else %}justify-content-start{% endif %} ">
+            {% if section.settings.image %}
+                <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Small reverse text image",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable-buttons",
+            "default": false,
+            "label": "Image position"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Small reverse text image",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

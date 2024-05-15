@@ -1,0 +1,72 @@
+<div class="title-video" id="tutorials-block">
+    <div class="container">
+        <div class="title-video__title">
+            <h2 class="mt-0 h2 text-center color-text">{{ section.settings.title }}</h2>
+        </div>
+        <div class="title-video__wrapper d-flex flex-wrap justify-content-center">
+            {% for block in section.blocks %}
+            <div class="title-video__item" >
+                <a  href="#ex1" rel="modal:open" id="myModal-{{ block.settings.id }}" class="title-video__item__video cursor-poiner position-relative d-flex justify-content-center align-items-center" style="background-image: url('{{ block.settings.video-img_1 | img_url: 'master' }}')">
+                    <div class="product-video__play d-flex flex-column justify-content-center align-items-center">
+                      <span id="play-button" class="play-button">
+                        <svg width="33" height="48" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.9413 22.4152C32.9813 23.2158 32.9813 24.7842 31.9413 25.5848L3.46999 47.502C2.15485 48.5144 0.250001 47.5769 0.250002 45.9172L0.250003 2.08279C0.250004 0.423116 2.15485 -0.514409 3.46999 0.497985L31.9413 22.4152Z" fill="#F4DD94"/>
+                        </svg>
+                      </span>
+                    </div>
+                </a>
+                <p class="color-text text-center text-18px">{{ block.settings.text }}</p>
+                <div id="ex1" class="modal">
+                    <iframe class="w-100 h-100"
+                            src="{{ block.settings.video-url_1 }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Title Video and Text",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        }
+    ],
+    "blocks": [
+        {
+        "name": "Item",
+        "type": "text",
+        "limit": 3,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "video-img_1",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "video-url_1",
+                "label": "Video url"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text"
+            }
+        ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Title Video and Text",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

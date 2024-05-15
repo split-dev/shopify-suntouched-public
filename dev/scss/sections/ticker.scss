@@ -1,0 +1,23 @@
+.ticker {
+  overflow: hidden !important;
+  height: 43px;
+  .marquee {
+    height: 43px;
+    padding-top: 8px;
+    .js-marquee {
+      margin-right: 0 !important;
+    }
+    h6 {
+      margin: 0 !important;
+      display: inline-block;
+      padding: 0;
+      transition: 0.3s;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: "Queens Var" !important;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.title-video {
+  padding: 64px 0 47px;
+  border-bottom: 1px solid #1E1E1E;
+
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0 16px;
+  }
+    &__title {
+      margin-bottom: 45px;
+
+      @include media-breakpoint-down(sm) {
+          margin-bottom: 23px;
+
+          h2 {
+            font-size: 30px;
+            line-height: 138.7%;
+          }
+      }
+    }
+
+    &__wrapper {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    &__item {
+      width: 33.333%;
+      padding: 0 10px 32px;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+
+      &__video {
+        width: 100%;
+        height: 551px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-down(sm) {
+          height: 426px;
+        }
+
+        &:before {
+          content: "";
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          background: rgba(6,4,0,0.48);
+        }
+
+        .play-button {
+          z-index: 1;
+        }
+      }
+
+      p{
+        max-width: 410px;
+        width: 100%;
+        display: flex;
+        margin: 18px auto 0;
+
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+          margin: 20px auto 0;
+          justify-content: center;
+        }
+      }
+    }
+}
+
+.tutorials-faq {
+  .modal a.close-modal {
+    top: 1.5px !important;
+    right: 3.5px !important;
+  }
+  .jquery-modal.blocker.current {
+    z-index: 99 !important;
+  }
+}

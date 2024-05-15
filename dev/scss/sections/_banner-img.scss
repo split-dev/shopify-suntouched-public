@@ -1,0 +1,25 @@
+.banner-img {
+  min-height: 430px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    min-height: 302px;
+  }
+
+  &__content {
+    min-height: 430px;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 302px;
+    }
+
+    img {
+      @include media-breakpoint-down(sm) {
+        width: 241.45px;
+      }
+    }
+  }
+}

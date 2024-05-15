@@ -1,0 +1,29 @@
+.title-text-image {
+  padding: 112px 0 104px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0 35px;
+  }
+
+  &__title {
+    h3 {
+      margin-bottom: 48px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__img {
+    @include media-breakpoint-down(md) {
+      padding: 0 15px;
+    }
+
+    img {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 932px;
+    }
+  }
+}

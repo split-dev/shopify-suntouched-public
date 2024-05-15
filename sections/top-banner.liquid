@@ -1,0 +1,128 @@
+<style>
+  .top-banner {
+  {% if collection.image.src %}
+    background-image: url('{{ collection.image.src | img_url: 'master' }}');
+  {% else %}
+    background-image: url('{{ section.settings.img-desktop | img_url: 'master' }}');
+  {% endif %}
+
+  }
+  {% if section.settings.img-mobile %}
+  @media (max-width: 767px) {
+    .top-banner {
+      background-image: url('{{ section.settings.img-mobile | img_url: 'master' }}');
+    }
+  }
+  {% endif %}
+</style>
+
+<div class="top-banner">
+  <div class="container">
+    <div class="top-banner__wrapper">
+      <div class="top-banner__info d-flex flex-column align-items-center justify-content-center">
+        {% if section.settings.title == blank %}
+          {% if collection.title != blank %}
+            <h1 class="h1 mt-0 text-center">
+              {{ collection.title }}
+            </h1>
+          {% endif %}
+          {% if page.title != blank %}
+            <h1 class="h1 mt-0 text-center">
+              {{ page.title }}
+            </h1>
+          {% endif %}
+          {% else %}
+            <h1 class="h1 mt-0 text-center">
+              {{ section.settings.title }}
+            </h1>
+        {% endif %}
+
+
+        {% if section.settings.text == blank %}
+          {% if collection.description != blank %}
+            <div class="top-banner__text d-flex justify-content-center text-center">{{ collection.description }}</div>
+          {% endif %}
+        {% else %}
+          <div class="top-banner__text d-flex justify-content-center text-center">{{ section.settings.text }}</div>
+        {% endif %}
+
+        {% if section.settings.enable-buttons %}
+          <div class="top-banner__buttons d-flex justify-content-center flex-wrap">
+            {% if section.settings.label %}
+              <a class="button__round mx-2 mb-4" href="{{ section.settings.url }}">{{ section.settings.label }}</a>
+            {% endif %}
+            {% if section.settings.label-two %}
+              <a class="button__round mx-2 mb-4" href="{{ section.settings.url-two }}">{{ section.settings.label-two }}</a>
+            {% endif %}
+          </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+  "name": "Top Banner",
+  "settings": [
+  {
+    "type": "image_picker",
+    "id": "img-desktop",
+    "label": "BG desktop"
+  },
+  {
+    "type": "image_picker",
+    "id": "img-mobile",
+    "label": "BG mobile (optional)"
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Title"
+  },
+  {
+    "type": "richtext",
+    "id": "text",
+    "label": "Text"
+  },
+  {
+    "type": "checkbox",
+    "id": "enable-buttons",
+    "default": false,
+    "label": "Enable Buttons"
+  },
+  {
+    "type": "url",
+    "id": "url",
+    "label": "URL Button 1"
+  },
+  {
+    "type": "text",
+    "id": "label",
+    "label": "Text Button 1",
+    "default": "Tutorials"
+  },
+  {
+    "type": "url",
+    "id": "url-two",
+    "label": "URL Button 2"
+  },
+  {
+    "type": "text",
+    "id": "label-two",
+    "label": "Text Button 2",
+    "default": "FAQ"
+  }
+  ],
+  "presets": [
+  {
+    "name": "Top Banner",
+    "category": "New"
+  }
+  ]
+  }
+{% endschema %}

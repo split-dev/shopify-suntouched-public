@@ -1,0 +1,41 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+<div class="block-list">
+    <div class="container">
+        <h3 class="h1 text-center block-list__title">{{ section.settings.title }}</h3>
+            <div class="list-article d-flex flex-wrap">
+                {%- for article in blog.articles  limit: 3 -%}
+                    {%- render 'article-card',
+                            article: article,
+                            media_height: section.settings.image_height,
+                            media_aspect_ratio: article.image.aspect_ratio,
+                            show_image: section.settings.show_image,
+                            show_date: section.settings.show_date,
+                            show_author: section.settings.show_author,
+                            show_excerpt: true
+                    -%}
+                {%- endfor -%}
+            </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "List article",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            }
+        ],
+        "presets": [
+            {
+            "name": "List article",
+            "category": "New"
+            }
+    ]
+}
+{% endschema %}

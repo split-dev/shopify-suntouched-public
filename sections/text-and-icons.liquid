@@ -1,0 +1,52 @@
+<section class="text-and-icons" >
+  <div class="container">
+    <div class="text-and-icons__text">
+      <div class="text-center">
+        {{ section.settings.text }}
+      </div>
+    </div>
+    <div class="text-and-icons__wrapper d-flex flex-wrap align-items-center justify-content-center">
+      {% for block in section.blocks %}
+        {% if block.settings.img %}
+          <div class="text-and-icons__tile">
+            <img loading="lazy" src="{{ block.settings.img | img_url: '90x' }}" alt="{{ block.settings.img.alt }}">
+          </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Text and Icons",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+    ],
+    "blocks": [
+      {
+      "name": "Image Item",
+      "type": "text",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        }
+    ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text and Icons",
+      "category": "New"
+    }
+  ]
+  }
+{% endschema %}

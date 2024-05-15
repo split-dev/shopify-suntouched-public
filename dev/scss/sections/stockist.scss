@@ -1,0 +1,155 @@
+.stockist {
+  &__header {
+    h2 {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 64px;
+      letter-spacing: 1px;
+      margin: 64px 0 34px;
+      @include media-breakpoint-down(sm) {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 138.7%;
+        margin: 40px 0 26px;
+      }
+    }
+  }
+  &__wrapper {
+    overflow: hidden !important;
+    border-top: 1px solid $c-text;
+    border-bottom: 1px solid $c-text;
+    @include media-breakpoint-down(sm) {
+      border-top: none;
+    }
+  }
+  &__table {
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+  &__table-col {
+    border-right: 1px solid $c-text;
+    padding-left: 30px;
+    padding-right: 15px;
+    @include media-breakpoint-down(sm) {
+      border-right: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &:first-of-type {
+      padding-left: 0;
+      width: 30%;
+      @include media-breakpoint-down(md) {
+        width: 40%;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+    &:nth-of-type(2) {
+      width: 40%;
+      @include media-breakpoint-down(md) {
+        width: 30%;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+    &:last-of-type {
+      width: 30%;
+      border-right: none;
+      @include media-breakpoint-down(md) {
+        width: 30%;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+      .stockist__table-col-head {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          border-top: 1px solid $c-text;
+          right: -100vw;
+          left: -100vw;
+          bottom: 0;
+          height: 1px;
+          @include media-breakpoint-down(sm) {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  &__table-col-head {
+    @include media-breakpoint-down(sm) {
+      border-top: 1px solid $c-text;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    h3 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 45px;
+      letter-spacing: 1px;
+      color: $c-text;
+      padding: 18px 0 14px;
+      margin: 0 !important;
+      @include media-breakpoint-down(sm) {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 138.7%;
+      }
+    }
+  }
+  &__table-col-body {
+    padding-right: 15px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 26px;
+      padding-bottom: 5px;
+      border-top: 1px solid $c-text;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    p {
+      margin-right: 15px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: $c-text;
+      margin-top: 0;
+      margin-bottom: 18px;
+      @include media-breakpoint-down(sm) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 24px;
+        margin-right: 0;
+      }
+    }
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 23px;
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: #DDA101;
+      cursor: pointer;
+      @include media-breakpoint-down(sm) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 23px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

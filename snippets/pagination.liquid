@@ -1,0 +1,47 @@
+<div class="w-100 d-flex justify-content-center">
+    <ul class="pagination-custom d-flex justify-content-center align-items-center">
+        {% if paginate.previous %}
+            <li><a href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}">
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.25 0.833008L0.875001 4.99967L5.25 9.16634" stroke="#000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+        {% else %}
+            <li class="disabled"><span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.25 0.833008L0.875001 4.99967L5.25 9.16634" stroke="#000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </span>
+            </li>
+        {% endif %}
+
+        {% for part in paginate.parts %}
+            {% if part.is_link %}
+                <li>
+                    <a href="{{ part.url }}" title="">{{ part.title }}</a>
+                </li>
+            {% else %}
+                {% if part.title == paginate.current_page %}
+                    <li class="active"><span>{{ part.title }}</span></li>
+                {% else %}
+                    <li><span>{{ part.title }}</span></li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        {% if paginate.next %}
+            <li><a href="{{ paginate.next.url }}" title="{{ paginate.next.title }}">
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 0.833008L5.125 4.99967L0.75 9.16634" stroke="#000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a></li>
+        {% else %}
+            <li class="disabled"><span>
+                              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.75 0.833008L5.125 4.99967L0.75 9.16634" stroke="#000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </span>
+            </li>
+        {% endif %}
+    </ul>
+</div>

@@ -1,0 +1,50 @@
+.text-and-icons {
+  padding: 60px 0 60px;
+  border-top: solid 1px #1e1e1e;
+  @include media-breakpoint-down(sm) {
+    padding: 32px 0;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 157.84%;
+    color: #727272;
+    margin-bottom: 60px;
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+      line-height: 157.84%;
+      margin-bottom: 40px;
+    }
+    > div {
+      strong {
+        font-weight: 400 !important;
+        color: $c-text;
+      }
+    }
+  }
+  &__tile {
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    margin-left: -20px;
+    @include media-breakpoint-down(sm) {
+      width: 82px;
+      min-width: 82px;
+      height: 82px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 73px;
+      min-width: 73px;
+      height: 73px;
+    }
+    &:first-of-type {
+      margin-left: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      border: 2px solid #fff;
+    }
+  }
+}

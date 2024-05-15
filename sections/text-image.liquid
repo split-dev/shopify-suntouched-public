@@ -1,0 +1,65 @@
+<section class="inform position-relative d-flex {% if section.settings.enable-buttons %}inform__mob-bottom{% else %}inform__mob-top{% endif %}">
+    <div class="container-small d-flex align-items-center color-text {% if section.settings.enable-buttons %}justify-content-start{% else %}justify-content-end{% endif %}">
+        <div class="inform__content {% if section.settings.enable-buttons %}inform__padding-right{% else %}inform__padding-left{% endif %}">
+            <h3 class="h3 inform__title">{{ section.settings.title }}</h3>
+            <div class="text-16px inform__text">{{ section.settings.text }}</div>
+            {% if section.settings.link_text != blank %}
+                <a class="button__gold inform__btn text-decoration-none" href="{{ section.settings.link }}">{{ section.settings.link_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="container-full {% if section.settings.enable-buttons %}inform__right{% else %}inform__left{% endif %}">
+        <div class="inform__img d-flex {% if section.settings.enable-buttons %}justify-content-end{% else %}justify-content-start{% endif %} ">
+            {% if section.settings.image %}
+                <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Reverse text image",
+    "tag": "section",
+    "class": "inform__mob-img",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+        },
+        {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable-buttons",
+            "default": false,
+            "label": "Image position"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Reverse text image",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

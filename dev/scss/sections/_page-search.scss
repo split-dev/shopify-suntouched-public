@@ -1,0 +1,42 @@
+.page-search {
+    &__title {
+      margin-bottom: 28px;
+    }
+
+  &__sort-content {
+    padding: 23px 0 24px;
+    border-top: 1px solid rgba(30, 30, 30, 0.4);
+    border-bottom: 1px solid rgba(30, 30, 30, 0.4);
+  }
+
+
+  .search__input.field__input {
+    padding: 9px 20px 7px 56px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 157.84%;
+    color: #1E1E1E;
+  }
+
+  .search__button {
+    left: 0;
+    top: var(--inputs-border-width);
+  }
+
+  .search__button .icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  &__status {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

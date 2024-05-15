@@ -1,0 +1,52 @@
+<section class="featured-collection-new">
+  <div class="container">
+    <div class="featured-collection-new__wrapper">
+      <h2 class="h1 mt-0 text-center color-text">{{ section.settings.title }}</h2>
+      <div class="featured-collection-new__list d-flex flex-wrap">
+        {% assign collection = collections[section.settings.collection] %}
+        {% for product in collection.products limit:4 %}
+          {%- render 'product-card-new' product: product -%}
+        {% endfor %}
+      </div>
+      {% if section.settings.label %}
+        <div class="featured-collection-new__button d-flex justify-content-center">
+          <a class="button__gold" href="{{ section.settings.url }}">{{ section.settings.label }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "New Featured Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Featured Collection",
+      "category": "New"
+    }
+  ]
+  }
+{% endschema %}

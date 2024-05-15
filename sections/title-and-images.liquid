@@ -1,0 +1,49 @@
+<section class="title-and-images" >
+  <div class="container">
+    <div class="title-and-images__title">
+      <h2 class="mt-0 h1 text-center color-text">{{ section.settings.title }}</h2>
+    </div>
+    <div class="title-and-images__wrapper d-flex flex-wrap align-items-end justify-content-center">
+      {% for block in section.blocks %}
+        {% if block.settings.img %}
+          <div class="title-and-images__tile">
+            <img loading="lazy" src="{{ block.settings.img | img_url: '420x' }}" alt="{{ block.settings.img.alt }}">
+          </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Title and Images",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+    ],
+    "blocks": [
+      {
+      "name": "Image Item",
+      "type": "text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        }
+    ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Title and Images",
+      "category": "New"
+    }
+  ]
+  }
+{% endschema %}

@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "16545147827ac27714": {
+      "type": "top-banner",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/Rectangle_3_1.jpg",
+        "img-mobile": "shopify:\/\/shop_images\/Rectangle_5.jpg",
+        "title": "",
+        "text": "",
+        "enable-buttons": false,
+        "url": "",
+        "label": "Tutorials",
+        "url-two": "",
+        "label-two": "FAQ"
+      }
+    },
+    "165451736770f0e25d": {
+      "type": "stockist",
+      "blocks": {
+        "b06eb8bb-ca8b-47dd-9a1c-73ac88c483ed": {
+          "type": "text",
+          "settings": {
+            "title": "Urban Outfitters",
+            "label": "Visit store",
+            "url": "shopify:\/\/pages\/faq"
+          }
+        },
+        "ece3a5dc-773a-41ed-8e8b-14cbdc21b8b5": {
+          "type": "text",
+          "settings": {
+            "title": "ONLYOU",
+            "label": "Visit store",
+            "url": ""
+          }
+        },
+        "9f0c9085-e4d5-410b-bb2e-13c998f7a56c": {
+          "type": "text",
+          "settings": {
+            "title": "Verishop",
+            "label": "Visit store",
+            "url": ""
+          }
+        },
+        "db25784a-2454-424e-ba90-4ab2b3b9e572": {
+          "type": "text",
+          "settings": {
+            "title": "Solen Organics",
+            "label": "Visit store",
+            "url": "https:\/\/solenorganics.com\/collections\/suntouched"
+          }
+        },
+        "ca565e4b-69e3-40fb-af48-b858467eb8f8": {
+          "type": "text",
+          "settings": {
+            "title": "Perfumarie",
+            "label": "Visit store",
+            "url": "https:\/\/perfumarie.com\/products\/suntouched-hair-lightener-for-dark-hair"
+          }
+        }
+      },
+      "block_order": [
+        "b06eb8bb-ca8b-47dd-9a1c-73ac88c483ed",
+        "ece3a5dc-773a-41ed-8e8b-14cbdc21b8b5",
+        "9f0c9085-e4d5-410b-bb2e-13c998f7a56c",
+        "db25784a-2454-424e-ba90-4ab2b3b9e572",
+        "ca565e4b-69e3-40fb-af48-b858467eb8f8"
+      ],
+      "settings": {
+        "header-one": "Online",
+        "header-two": "USA",
+        "body-two": "<p>Christina Ltd, Rhode Island<br\/>Summer Salt Beach and Surf, Bellport New York<\/p>",
+        "header-three": "Canada",
+        "body-three": "<p>Sugar Studio, Pincher Creek, Alberta<\/p>"
+      }
+    },
+    "16552105692a7a9056": {
+      "type": "cta-form",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/Artboard_10_copy_d531d6a4-7bd1-4cf7-876a-13b21bc07d20.png",
+        "img-mobile": "shopify:\/\/shop_images\/Rectangle_7.jpg",
+        "title": "Looking to carry Suntouched in your store, boutique, surf shop? Awesome, we want to hear from you.",
+        "url": "",
+        "label": "view our products"
+      }
+    },
+    "1654515019c54480fb": {
+      "type": "featured-collection-new",
+      "settings": {
+        "collection": "shop-all",
+        "title": "You'll love it!",
+        "label": "all products",
+        "url": "shopify:\/\/collections\/shop-all"
+      }
+    }
+  },
+  "order": [
+    "16545147827ac27714",
+    "165451736770f0e25d",
+    "16552105692a7a9056",
+    "1654515019c54480fb"
+  ]
+}

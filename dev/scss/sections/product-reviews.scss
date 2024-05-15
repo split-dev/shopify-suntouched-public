@@ -1,0 +1,113 @@
+.product-reviews {
+  background: #fff;
+  padding: 104px 0 88px;
+  overflow: hidden;
+  @include media-breakpoint-down(sm) {
+    padding: 48px 0;
+
+  }
+  h2 {
+    margin-bottom: 42px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 28px;
+    }
+  }
+  &__slider {
+    @include media-breakpoint-down(xs) {
+      padding-left: 15px !important;
+    }
+    .swiper-slide {
+      height: auto !important;
+    }
+  }
+  &__item {
+    background: #FCF8F0;
+    border: 1px solid #D8D5CE;
+    &:last-of-type {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0 !important;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 32px;
+      flex-direction: column;
+    }
+  }
+  &__slider {
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
+  }
+  &__mobile {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block !important;
+    }
+  }
+  &__item-img {
+    width: 50%;
+    min-width: 50%;
+    max-width: 450px;
+    height: 100%;
+    min-height: 289px;
+    max-height: 350px;
+    @include media-breakpoint-down(sm) {
+      height: inherit;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      max-height: 225px;
+      min-height: 225px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include media-breakpoint-down(sm) {
+        height: inherit;
+      }
+    }
+  }
+  &__text {
+    padding: 20px 30px 20px 20px;
+    font-size: 16px;
+    line-height: 150%;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 20px 15px;
+    }
+    > div {
+      font-weight: 400;
+      margin-bottom: 30px;
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+  .product-reviews-swiper-pagination {
+    margin-top: 48px;
+    height: 30px;
+    display: flex;
+    @include media-breakpoint-down(sm) {
+      margin-top: 32px;
+    }
+    .swiper-pagination-bullet {
+      width: 18px;
+      min-width: 18px;
+      height: 18px;
+      background-color: transparent;
+      border: solid 1px $c-text;
+      display: block;
+      border-radius: 50px;
+      margin: 0 12px;
+      cursor: pointer;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $c-text !important;
+    }
+  }
+}

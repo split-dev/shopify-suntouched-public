@@ -1,0 +1,67 @@
+<style>
+  .ticker {
+    background-color: {{ section.settings.color }};
+  }
+  .ticker h6 {
+    color: {{ section.settings.color-text }};
+  }
+</style>
+
+<section class="ticker">
+  <div class="ticker__position marquee" data-duplicated='true'>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+    <h6>{{ section.settings.word-one }}</h6>
+    <h6>{{ section.settings.word-two }}</h6>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Ticker",
+  "settings": [
+    {
+      "type": "color",
+      "id": "color",
+      "label": "BG color",
+      "default": "#1e1e1e"
+    },
+    {
+    "type": "color",
+    "id": "color-text",
+    "label": "Text color",
+    "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "word-one",
+      "label": "Word in Ticker",
+      "default": "  &nbsp;&nbsp;Suntouched&nbsp;&nbsp;    •"
+    },
+    {
+      "type": "text",
+      "id": "word-two",
+      "label": "  Word in Ticker",
+      "default": " &nbsp;&nbsp;Sunshine in a bottle &nbsp;&nbsp;   •"
+    }
+  ],
+  "presets": [
+  {
+    "name": "ticker",
+    "category": "New"
+  }
+  ]
+  }
+{% endschema %}

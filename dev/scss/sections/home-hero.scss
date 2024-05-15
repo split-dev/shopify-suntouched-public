@@ -1,0 +1,100 @@
+.home-hero {
+  &:before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(6, 4, 0, 0.48);
+    z-index: 2;
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 32px 0;
+    @include media-breakpoint-down(sm) {
+      align-items: center;
+      padding-top: 40px;
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 101px;
+      margin-bottom: 8px !important;
+      @include media-breakpoint-down(sm) {
+        margin-top: 24px !important;
+        font-size: 42px;
+        line-height: 110%;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  &__logo {
+    svg {
+      @include media-breakpoint-down(sm) {
+        max-width: 178px;
+        height: auto;
+      }
+    }
+  }
+  &__button {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+    a {
+      margin: 32px 12px 0;
+      @include media-breakpoint-down(sm) {
+        margin: 24px 0 0;
+      }
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+      &:last-of-type {
+        @include media-breakpoint-down(sm) {
+          margin: 16px 0 0;
+        }
+      }
+    }
+  }
+  #myPlayer {
+    display: block;
+
+  }
+  .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+.home-hero__bg {
+  overflow: hidden;
+  min-height: 690px !important;
+  @include media-breakpoint-down(xs) {
+    min-height: 540px !important;
+  }
+}
+.home-hero__bg video {
+  position:  absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1 !important;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

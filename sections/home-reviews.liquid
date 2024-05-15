@@ -1,0 +1,110 @@
+<section class="home-reviews" >
+  <div class="container">
+    <div class="home-reviews__wrapper">
+      <h2 class="h1 mt-0 text-center color-text">{{ section.settings.title }}</h2>
+    </div>
+  </div>
+  <div class="home-reviews__slider home-reviews-slider-init swiper-container">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {%- assign product = all_products[block.settings.product] -%}
+        <div class="swiper-slide home-reviews__item d-flex flex-column justify-content-between">
+          <div>
+            <div class="home-reviews__item-title d-flex justify-content-between">
+              <p class="color-text">{{ block.settings.name }}</p>
+              <div class="ml-3">
+                <svg width="88" height="16" viewBox="0 0 88 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 0L10.4452 4.63449L15.6085 5.52786L11.9564 9.28551L12.7023 14.4721L8 12.16L3.29772 14.4721L4.0436 9.28551L0.391548 5.52786L5.55481 4.63449L8 0Z" fill="#DDA101"/>
+                  <path d="M26 0L28.4452 4.63449L33.6085 5.52786L29.9564 9.28551L30.7023 14.4721L26 12.16L21.2977 14.4721L22.0436 9.28551L18.3915 5.52786L23.5548 4.63449L26 0Z" fill="#DDA101"/>
+                  <path d="M44 0L46.4452 4.63449L51.6085 5.52786L47.9564 9.28551L48.7023 14.4721L44 12.16L39.2977 14.4721L40.0436 9.28551L36.3915 5.52786L41.5548 4.63449L44 0Z" fill="#DDA101"/>
+                  <path d="M62 0L64.4452 4.63449L69.6085 5.52786L65.9564 9.28551L66.7023 14.4721L62 12.16L57.2977 14.4721L58.0436 9.28551L54.3915 5.52786L59.5548 4.63449L62 0Z" fill="#DDA101"/>
+                  <path d="M80 0L82.4452 4.63449L87.6085 5.52786L83.9564 9.28551L84.7023 14.4721L80 12.16L75.2977 14.4721L76.0436 9.28551L72.3915 5.52786L77.5548 4.63449L80 0Z" fill="#DDA101"/>
+                </svg>
+              </div>
+            </div>
+            <div class="home-reviews__text">
+              <b class="color-text mt-3 d-block">{{ block.settings.topic }}</b>
+              <div class="color-text">{{ block.settings.text }}</div>
+            </div>
+          </div>
+          <div class="home-reviews__item-cart d-flex">
+            <a class="d-block" href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: '90x' }}" alt="{{ product.featured_image.alt }}">
+            </a>
+            <div class="home-reviews__item-cart-box">
+              <a class="color-text" href="{{ product.url }}">{{ product.title }}</a>
+              <span class="home-reviews__item-cart-buttons d-flex justify-content-between">
+                <span class="d-block color-text">{{ product.price | money }}</span>
+                <span class="d-block">
+                  {% if product.available %}
+                    {% form 'product', product %}
+                      <input class="d-none"
+                             value="{{ product.selected_or_first_available_variant.id }}"
+                             name="id">
+                      <input class="d-none"
+                             type="text"
+                             value="1"
+                             name="quantity">
+                      <button class=""
+                              type="submit">ADD TO BAG</button>
+                    {% endform %}
+                  {% else %}
+                    <span class="d-block text-color text-uppercase font-weight-semibold">Sold Out</span>
+                  {% endif %}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="reviews-swiper-pagination d-flex justify-content-center"></div>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Home Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+    "name": "Item",
+    "type": "text",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Select Product"
+      },
+      {
+        "type": "text",
+        "id": "name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "topic",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Review"
+      }
+  ]
+  }
+  ],
+  "presets": [
+  {
+  "name": "Home Reviews",
+  "category": "New"
+  }
+  ]
+  }
+{% endschema %}

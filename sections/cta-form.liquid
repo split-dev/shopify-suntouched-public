@@ -1,0 +1,107 @@
+<style>
+  .cta {
+    background-image: url('{{ section.settings.img-desktop | img_url: 'master' }}');
+  }
+  @media (max-width: 767px) {
+    .cta {
+      background-image: url('{{ section.settings.img-mobile | img_url: 'master' }}');
+    }
+  }
+</style>
+
+<div class="cta cta-form">
+  <div class="container">
+    <div class="cta__wrapper">
+      <div class="cta__info d-flex flex-column align-items-center justify-content-center">
+        {% if section.settings.title %}
+          <h3 class="mt-0 text-center">
+            {{ section.settings.title }}
+          </h3>
+        {% endif %}
+        <div class="cta-form__form w-100 d-flex justify-content-center">
+          {% form 'customer', class: 'newsletter-form' %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="footer__field-wrapper">
+              <div class="field cta-form__form-box">
+                <input
+                        id="NewsletterForm--{{ section.id }}"
+                        type="email"
+                        name="contact[email]"
+                        class="cta-form__input field__input"
+                        value="{{ form.email }}"
+                        aria-required="true"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        {% if form.errors %}
+                          autofocus
+                          aria-invalid="true"
+                          aria-describedby="Newsletter-error--{{ section.id }}"
+                          {% elsif form.posted_successfully? %}
+                          aria-describedby="Newsletter-success--{{ section.id }}"
+                        {% endif %}
+                        placeholder="{{ 'newsletter.label' | t }}"
+                        required
+                >
+                <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  {{ 'newsletter.label' | t }}
+                </label>
+                <button type="submit" class="newsletter-form__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.5875 8.33263L2.0875 0.0826268C1.95818 0.0179519 1.81292 -0.00796197 1.66921 0.00800564C1.52551 0.0239732 1.38948 0.0811415 1.2775 0.172627C1.17057 0.262246 1.09076 0.379917 1.04704 0.51241C1.00331 0.644903 0.997416 0.786965 1.03 0.922627L3.25 9.00013L1 17.0551C0.969425 17.1684 0.965855 17.2873 0.989583 17.4022C1.01331 17.5171 1.06367 17.6249 1.13662 17.7168C1.20957 17.8087 1.30307 17.8822 1.4096 17.9315C1.51614 17.9807 1.63273 18.0042 1.75 18.0001C1.86741 17.9994 1.98301 17.9712 2.0875 17.9176L18.5875 9.66763C18.7104 9.60469 18.8135 9.50907 18.8854 9.39129C18.9574 9.27352 18.9955 9.13816 18.9955 9.00013C18.9955 8.86209 18.9574 8.72674 18.8854 8.60896C18.8135 8.49119 18.7104 8.39557 18.5875 8.33263ZM2.9125 15.8326L4.57 9.75013H11.5V8.25013H4.57L2.9125 2.16763L16.57 9.00013L2.9125 15.8326Z" fill="#1E1E1E"/>
+                  </svg>
+                </button>
+              </div>
+              {%- if form.errors -%}
+                <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+              {%- endif -%}
+            </div>
+            {%- if form.posted_successfully? -%}
+              <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+            {%- endif -%}
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+  "name": "CTA Form",
+  "settings": [
+  {
+    "type": "image_picker",
+    "id": "img-desktop",
+    "label": "BG desktop"
+  },
+  {
+    "type": "image_picker",
+    "id": "img-mobile",
+    "label": "BG mobile"
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Title"
+  },
+  {
+    "type": "url",
+    "id": "url",
+    "label": "URL Button"
+  },
+  {
+    "type": "text",
+    "id": "label",
+    "label": "Text Button",
+    "default": "view our products"
+  }
+  ],
+  "presets": [
+  {
+    "name": "CTA Form",
+    "category": "New"
+  }
+  ]
+  }
+{% endschema %}

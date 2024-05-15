@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "1654084101632827fa": {
+      "type": "top-banner",
+      "settings": {
+        "img-mobile": "shopify:\/\/shop_images\/pexels-anna-tarazevich-6481620.jpg",
+        "title": "",
+        "text": "<p>Pitch black, grey, fiery red, natural or dyed – whatever your hair, Suntouched will lighten it naturally, with no damage or hassle up to three shades.<\/p>",
+        "enable-buttons": false,
+        "url": "",
+        "label": "Tutorials",
+        "url-two": "",
+        "label-two": "FAQ"
+      }
+    },
+    "16540916873113e932": {
+      "type": "collection-template",
+      "settings": {
+        "enable_custom-sort": false,
+        "link_list": "shop"
+      }
+    }
+  },
+  "order": [
+    "1654084101632827fa",
+    "16540916873113e932"
+  ]
+}

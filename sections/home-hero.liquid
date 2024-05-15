@@ -1,0 +1,80 @@
+<section class="home-hero d-flex flex-column justify-content-center position-relative">
+  <div class="home-hero__bg position-relative">
+    <video id="myPlayer" playsinline
+           width="100%"
+           autoplay
+           muted
+           loop
+           class="video-frame">
+      <source src="{{ section.settings.video_link }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="container">
+    <div class="home-hero__wrapper d-flex flex-column align-items-center">
+      <div class="home-hero__logo">{{ section.settings.logo }}</div>
+      <h1 class="m-0">{{ section.settings.title }}</h1>
+      <p class="m-0">{{ section.settings.subtitle }}</p>
+      <div class="home-hero__button d-flex">
+        <a class="button__gold" href="{{ section.settings.button-url }}">{{ section.settings.button-text }}</a>
+        <a class="button__transparent" href="{{ section.settings.button-two-url }}">{{ section.settings.button-two-text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+  "name": "Home Hero",
+  "settings": [
+  {
+    "type": "html",
+    "id": "logo",
+    "label": "SVG Logo"
+  },
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Title"
+  },
+  {
+    "type": "text",
+    "id": "subtitle",
+    "label": "Subtitle"
+  },
+  {
+    "type": "text",
+    "id": "button-text",
+    "label": "Button Label"
+  },
+  {
+    "type": "url",
+    "id": "button-url",
+    "label": "URL button"
+  },
+  {
+  "type": "text",
+  "id": "button-two-text",
+  "label": "Button Label"
+  },
+  {
+  "type": "url",
+  "id": "button-two-url",
+  "label": "URL button"
+  },
+  {
+    "type": "url",
+    "id": "video_link",
+    "label": "Video File URL"
+  }
+  ],
+  "presets": [
+  {
+  "name": "Home Hero",
+  "category": "New"
+  }
+  ]
+  }
+{% endschema %}

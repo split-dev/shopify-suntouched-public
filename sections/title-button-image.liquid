@@ -1,0 +1,57 @@
+<section class="title-button-image" style="background-color: {{ section.settings.color }}">
+  <div class="container">
+    <div class="title-button-image__text d-flex justify-content-center align-items-center flex-column">
+      <h2 class="h1 mt-0 color-text text-center">{{  section.settings.title }}</h2>
+      <div class="d-flex justify-content-center">
+        <a class="button__white" href="{{  section.settings.url }}">{{  section.settings.label }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="container-full">
+    <div class="title-button-image__media d-flex">
+      {% if section.settings.img %}
+        <img src="{{ section.settings.img | img_url: "720x" }}" alt="{{ section.settings.img.alt }}">
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Title, Button and Image",
+  "settings": [
+    {
+      "type": "color",
+      "id": "color",
+      "label": "BG color",
+      "default": "#C2E4EE"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "URL Button"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label Button"
+    }
+  ],
+  "presets": [
+  {
+    "name": "Title, Button and Image",
+    "category": "New"
+  }
+  ]
+  }
+{% endschema %}

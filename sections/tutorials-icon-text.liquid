@@ -1,0 +1,61 @@
+<div class="title-video" id="tutorials-block">
+    <div class="container">
+        <div class="title-video__title">
+            <h2 class="mt-0 h2 text-center color-text">{{ section.settings.title }}</h2>
+        </div>
+        <div class="title-video__wrapper d-flex flex-wrap justify-content-center">
+            {% for block in section.blocks %}
+            <div class="tutorials-icon-and-text__item" >
+                <img class="tutorials-icon-and-text__img" src="{{ block.settings.img | img_url: 'master' }}" />
+                <p class="tutorials-icon-and-text__title">{{ block.settings.title }}</p>
+                <div class="text-16px text-center color-text">{{ block.settings.text }}</div>
+            </div>
+            {% endfor %}
+        </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Tutorials icon and text",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        }
+    ],
+    "blocks": [
+        {
+        "name": "Item",
+        "type": "text",
+        "limit": 3,
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "img",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text"
+            }
+        ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Tutorials icon and text",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

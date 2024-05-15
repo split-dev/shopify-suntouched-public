@@ -1,0 +1,242 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1655457049f4e4706d": {
+      "type": "top-banner",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/imgonline-com-ua-convertTVDAdjfMSDsS.jpg",
+        "img-mobile": "shopify:\/\/shop_images\/imgonline-com-ua-convertTVDAdjfMSDsS.jpg",
+        "title": "",
+        "text": "<p>Right from the beginning, we wanted to make our products so easy to use you can use it even while traveling.  But we figured we’d help you make the most out of your Suntouched so the process feels even more fun and carefree.<\/p>",
+        "enable-buttons": true,
+        "url": "#tutorials-block",
+        "label": "Tutorials",
+        "url-two": "#faq-block",
+        "label-two": "FAQ"
+      }
+    },
+    "1656616837c31a6c2d": {
+      "type": "tutorials-icon-text",
+      "blocks": {
+        "3a960f8a-52ee-44c2-92cd-b71061d83ea3": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Spray.png",
+            "title": "1. Spray",
+            "text": "<p>Spray on wet or dry hair until hair is damp with the product, comb through for an even application.<\/p>"
+          }
+        },
+        "f63f3287-0c35-4507-a498-1805148f5bf8": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Heat_dark_h.png",
+            "title": "2. Heat",
+            "text": "<p>Apply heat from your blowdryer for a few minutes, or from the sunshine. Wait for a couple of hours for the results to appear, and overnight to see full results. No rinsing required. Results may vary.<\/p>"
+          }
+        },
+        "5b77344b-f867-4656-a6a9-e558c504e41c": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Repeat.png",
+            "title": "3. Repeat",
+            "text": "<p>Repeat until reaching the desired level of lightness. Wait a couple of days between each application. Enjoy your results & share them with us on IG @suntouched!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3a960f8a-52ee-44c2-92cd-b71061d83ea3",
+        "f63f3287-0c35-4507-a498-1805148f5bf8",
+        "5b77344b-f867-4656-a6a9-e558c504e41c"
+      ],
+      "settings": {
+        "title": "Tutorials"
+      }
+    },
+    "16554572022019e953": {
+      "type": "title-video-text",
+      "disabled": true,
+      "blocks": {
+        "839acd8e-e0d2-4181-8111-72575a0aa591": {
+          "type": "text",
+          "settings": {
+            "video-img_1": "shopify:\/\/shop_images\/Rectangle_27.png",
+            "video-url_1": "https:\/\/player.vimeo.com\/video\/606702357",
+            "text": "How to make the most out of Suntouched hair lightener?"
+          }
+        },
+        "ae70bffd-adf9-45f0-ba19-6b3cf9f9f0c9": {
+          "type": "text",
+          "settings": {
+            "video-img_1": "shopify:\/\/shop_images\/Rectangle_27_0360dff9-05d3-4f0f-83ca-340ecdaafa7e.png",
+            "video-url_1": "https:\/\/player.vimeo.com\/video\/606666662",
+            "text": "How to make the most out of Suntouched hair lightener?"
+          }
+        },
+        "86231af2-05dc-4f3f-9cc5-9d31edb7200b": {
+          "type": "text",
+          "settings": {
+            "video-img_1": "shopify:\/\/shop_images\/Rectangle_217.png",
+            "video-url_1": "https:\/\/player.vimeo.com\/video\/559272336",
+            "text": "How to make the most out of Suntouched hair lightener?"
+          }
+        }
+      },
+      "block_order": [
+        "839acd8e-e0d2-4181-8111-72575a0aa591",
+        "ae70bffd-adf9-45f0-ba19-6b3cf9f9f0c9",
+        "86231af2-05dc-4f3f-9cc5-9d31edb7200b"
+      ],
+      "settings": {
+        "title": "Tutorials"
+      }
+    },
+    "1655457292fe575f26": {
+      "type": "faq-block",
+      "blocks": {
+        "323d5470-0047-4493-9b7f-94238af0c569": {
+          "type": "Item1",
+          "settings": {
+            "question_1": "Do you ship internationally?",
+            "answer_1": "<p>Yes, we ship to most countries!<\/p>",
+            "question_2": "How long does delivery take?",
+            "answer_2": "<p>Our shipping usually takes between 9-15 business days. You will receive a tracking link and be updated every step along the way.<\/p>",
+            "question_3": "What are the shipping costs?",
+            "answer_3": "<p>We're happy to offer free tracked shipping on all orders above $50. Shipping for orders under $50 is $5.<\/p>"
+          }
+        },
+        "fb413c22-008a-4917-a5b2-6126d76871a0": {
+          "type": "Item1",
+          "settings": {
+            "question_1": "Will I be able to track my order?",
+            "answer_1": "<p>All tracking numbers will be emailed to you as soon as the tracking information becomes available, usually the next day.<\/p>",
+            "question_2": "Help, my address is wrong on my order!",
+            "answer_2": "<p>If the address on your order is wrong, email support@suntouched.co as soon as possible, we can only adjust it if your order hasn't been shipped out. However, we can't promise anything, as all our orders are usually processed within 24 hours. If your order has already entered the shipping process, we won't be able to stop it. Please make sure to provide the correct shipping address to avoid this!<\/p>",
+            "question_3": "My package said it was delivered, but I can't find it.",
+            "answer_3": "<p>No sweat, contact us at support@suntouched.co, and we'll help you out.<\/p>"
+          }
+        },
+        "c4590429-d9e5-469a-94d5-a8dac6383eb5": {
+          "type": "Item1",
+          "settings": {
+            "question_1": "What to do if I still have not received my order?",
+            "answer_1": "<p>If your order has not been received in the estimated delivery time, please reach out to us at support@suntouched.co and we will be happy to help.<\/p>",
+            "question_2": "",
+            "answer_2": "",
+            "question_3": "",
+            "answer_3": ""
+          }
+        },
+        "6ae3e054-0416-4aa6-aff0-f510b7317e04": {
+          "type": "Item2",
+          "settings": {
+            "question_1": "Tell me more about your products…",
+            "answer_1": "<p>All of our products are color safe and free of parabens, alcohol and harmful sulfates. We want your hair to always look and feel its best, so we only use ingredients that keep your strands healthy in the long run.<\/p>",
+            "question_2": "Are Suntouched products tested on animals?",
+            "answer_2": "<p>Absolutely not, we're proud to be 100% cruelty-free!<\/p>",
+            "question_3": "Can Suntouched packaging by recycled?",
+            "answer_3": "<p>Yes, our packaging is 100% recyclable :)<\/p>"
+          }
+        },
+        "0417b04b-3b5b-4e92-82b0-b34f96cf8f98": {
+          "type": "Item2",
+          "settings": {
+            "question_1": "How does the Hair Lightener work?",
+            "answer_1": "<p>What makes this product work is a lightening blend of ingredients which includes hydrogen peroxide & natural extracts. Hydrogen peroxide along with vitamin C, citrus and pineapple work to oxidize the melanin in the hair, causing it to lighten.<\/p>",
+            "question_2": "Can I use Suntouched on dyed or bleached hair?",
+            "answer_2": "<p>Yes, it also works on dyed hair by lifting the pigment of the hair dye, resulting in lighter hues.<\/p>",
+            "question_3": "What if there’s no sun or heat where I live?",
+            "answer_3": "<p>Good news! This is why we say that Suntouched is for sunkissed highlights year-round: you can use a blow-dryer on low heat for 3-4 minutes to achieve golden, beachy locks from the comfort of your home.<\/p>"
+          }
+        },
+        "af9dfc3e-a4ad-4812-a919-900ec5778982": {
+          "type": "Item2",
+          "settings": {
+            "question_1": "Can I dye my hair after using Suntouched?",
+            "answer_1": "<p>We recommend waiting at least 4 weeks after using Suntouched before highlighting or dying your hair. We also recommend checking in with your stylist and doing a strand test beforehand to make sure both treatments are compatible. <\/p>",
+            "question_2": "",
+            "answer_2": "",
+            "question_3": "",
+            "answer_3": ""
+          }
+        },
+        "00b94ece-2dde-4f57-b58b-9896d57554ce": {
+          "type": "Item3",
+          "settings": {
+            "question_1": "Received a damaged product?",
+            "answer_1": "<p>Send over a photo to <a href=\"#\" title=\"#\"><strong>support@suntouched.co<\/strong><\/a>, and we’ll help you out with this ASAP.<\/p>",
+            "question_2": "How do I cancel my order?",
+            "answer_2": "<p>Contact <a href=\"#\" title=\"#\"><strong>support@suntouched.co<\/strong> <\/a>with your order number, and we will check if the order is still within the cancellation window.<\/p>",
+            "question_3": "Do you offer a money-back guarantee?",
+            "answer_3": "<p>Yes! We do have a 30-day money-back guarantee, which means we will give you a refund if your hair doesn’t lighten as it should after using our Suntouched Hair Lightener consistently, meaning at least once a week for 1 month. We do require before and after photos to understand your concerns, so please remember to take photos before starting with Suntouched & videos to make sure you’re applying it properly. $10 for shipping cost will be deducted from all refunds.<\/p>"
+          }
+        },
+        "1f237aa1-711b-4c48-b463-9d7646584c19": {
+          "type": "Item4",
+          "settings": {
+            "question_1": "How can I become an authorized retailer with Suntouched?",
+            "answer_1": "<p>Looking to carry Suntouched in your store, boutique, surf shop? Awesome! You can get in touch via charlotte@suntouched.co. Can't wait to hear from you!<\/p>",
+            "question_2": "Who can I contact about following up with a wholesale application or other wholesale inquiries?",
+            "answer_2": "<p>You can reach out to our wholesale team at charlotte@suntouched.co for any questions you may have!<\/p>",
+            "question_3": "",
+            "answer_3": ""
+          }
+        },
+        "3d5cdbed-dcbf-46c2-89a5-85984d8dbfb2": {
+          "type": "Item5",
+          "settings": {
+            "question_1": "Who can I contact about collaborations with Suntouched?",
+            "answer_1": "<p>For any collaboration inquiries, please contact andjela@suntouched.co.<\/p>",
+            "question_2": "I’m interested in being apart of the Suntouched ambassador program, how do I reach out?",
+            "answer_2": "<p>Amazing! Shoot us an email at andjela@suntouched.co with your social media handles, and we’ll be in touch with you shortly.<\/p>",
+            "question_3": "",
+            "answer_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "323d5470-0047-4493-9b7f-94238af0c569",
+        "fb413c22-008a-4917-a5b2-6126d76871a0",
+        "c4590429-d9e5-469a-94d5-a8dac6383eb5",
+        "6ae3e054-0416-4aa6-aff0-f510b7317e04",
+        "0417b04b-3b5b-4e92-82b0-b34f96cf8f98",
+        "af9dfc3e-a4ad-4812-a919-900ec5778982",
+        "00b94ece-2dde-4f57-b58b-9896d57554ce",
+        "1f237aa1-711b-4c48-b463-9d7646584c19",
+        "3d5cdbed-dcbf-46c2-89a5-85984d8dbfb2"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "title_block": "Shipping",
+        "title_block_2": "Get to know the products",
+        "title_block_3": "Returns + Canceling Orders",
+        "title_block_4": "Wholesale",
+        "title_block_5": "Collaborations + Affiliates"
+      }
+    },
+    "16554589186db723d2": {
+      "type": "bg-img-text",
+      "settings": {
+        "image-bg": "shopify:\/\/shop_images\/Rectangle_36.png",
+        "image-bg_mob": "shopify:\/\/shop_images\/Rectangle_36_8381f9f5-e55c-431f-856d-19b0ae105210.png",
+        "title": "Can't find what you're looking for?",
+        "link": "shopify:\/\/pages\/contact-us",
+        "link_text": "Contact us"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655457049f4e4706d",
+    "1656616837c31a6c2d",
+    "16554572022019e953",
+    "1655457292fe575f26",
+    "16554589186db723d2"
+  ]
+}

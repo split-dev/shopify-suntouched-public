@@ -1,0 +1,25 @@
+<div class="big-article">
+    <div class="container-full">
+        <div class="big-article__img">
+            {% if article.image.src %}
+                <img src="{{ article.image.src | img_url: 'master' }}">
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="big-article__content">
+            <div class="big-article__tags">
+                <div class="d-flex flex-wrap">
+                    {% for tag in article.tags %}
+                        <p class="list-article__item__tag tag-filters__item__small">{{ tag }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <h2 class="h2 big-article__title">{{ article.title | truncate: 58 }}</h2>
+            <p class="big-article__inform color-text">{{ section.settings.text_blog }}</p>
+            <h3 class="text-14px d-sm-block d-none">{{ article.created_at | date: "%d %b %Y" }}</h3>
+            <a href="{{ article.url }}" class="button__gold big-article__link ">Read article</a>
+        </div>
+    </div>
+</div>
+

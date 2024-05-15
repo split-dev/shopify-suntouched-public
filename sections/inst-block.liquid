@@ -1,0 +1,36 @@
+<div class="inst-block">
+    <div class="container">
+        <h3 class="h2 text-center color-text">{{ section.settings.title }}</h3>
+        {%- if settings.social_instagram_link != blank -%}
+            <a href="{{ settings.social_instagram_link }}" class="link text-center inst-block__link d-block text-24px-all" >
+                {{ section.settings.inst }}
+                                            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+            </a>
+        {%- endif -%}
+        <div id="instagram-stories-box"></div><div id="instagram-feed-box"></div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Instagram block",
+    "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "inst",
+                "label": "Instagram"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Instagram block",
+                "category": "New"
+            }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,145 @@
+.template-search {
+  .select2-container--default .select2-selection--single .select2-selection__arrow:after {
+    top: 13px;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding: 10px 20px 10px 20px !important;
+  }
+
+  .custom-sort__sort {
+    max-width: 193px !important;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 193px !important;
+      width: 230px !important;
+    }
+  }
+
+  .product-card {
+    max-width: 329px;
+    height: 100%;
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
+    a {
+      &:hover {
+        .product-card__title {
+          color: #DDA101;
+        }
+      }
+    }
+  }
+
+  .grid__item {
+    .list-article__item{
+      width: 100%;
+      max-width: 329px;
+
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .list-article__item {
+    padding-left: 0;
+
+    &__date {
+      display: none;
+    }
+  }
+
+  .card-wrapper {
+
+    /* max-height: 424px;
+     height: 100%;*/
+  }
+  .card--card {
+    background: #FCF8F0;
+  }
+
+  .grid {
+    margin-top: 40px;
+  }
+
+  .grid__item {
+    margin-bottom: 20px;
+
+    .button__article {
+      display: none !important;
+    }
+    a {
+      border: none !important;
+    }
+  }
+
+  .list-article__item {
+    &__list-tags {
+      display: none;
+    }
+
+    &__heading {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      transition: 0.3s;
+    }
+
+    .card__content {
+      max-width: 329px;
+      width: 100%;
+      margin-top: 0;
+
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+      }
+    }
+
+    .card__inner {
+      height: 343px;
+
+      @include media-breakpoint-down(sm) {
+        height: 100%;
+      }
+    }
+  }
+
+  .product-card__img {
+    img {
+      width: 329px;
+      height: 343px;
+
+      @include media-breakpoint-down(md) {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .card--card {
+    border: 1px solid rgba(30,30,30,0.4);
+    /*height: 424px;*/
+  }
+
+  .card__heading {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+  }
+
+  .grid--2-col-tablet-down .grid__item {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .facets__form {
+    gap: 0;
+  }
+}
+

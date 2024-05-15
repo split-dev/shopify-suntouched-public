@@ -1,0 +1,110 @@
+<section class="stockist">
+  <div class="stockist__header">
+    <div class="container-small">
+      {{ page.content }}
+    </div>
+  </div>
+  <div class="stockist__wrapper">
+    <div class="container-small">
+      <div class="stockist__table d-flex">
+        <div class="stockist__table-col">
+          <div class="stockist__table-col-head">
+            <h3>
+              {{ section.settings.header-one }}
+            </h3>
+          </div>
+          <div class="stockist__table-col-body">
+            {% for block in section.blocks %}
+              <div class="d-flex justify-content-between">
+                <p>{{ block.settings.title }}</p>
+                <a class="d-block" href="{{ block.settings.url }}">{{ block.settings.label }}</a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="stockist__table-col">
+          <div class="stockist__table-col-head">
+            <h3>
+              {{ section.settings.header-two }}
+            </h3>
+          </div>
+          <div class="stockist__table-col-body">{{ section.settings.body-two }}</div>
+        </div>
+        <div class="stockist__table-col">
+          <div class="stockist__table-col-head">
+            <h3>
+              {{ section.settings.header-three }}
+            </h3>
+          </div>
+          <div class="stockist__table-col-body">{{ section.settings.body-three }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+  "name": "Stockist Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header-one",
+      "label": "Header 1",
+      "default": "Online"
+    },
+    {
+      "type": "text",
+      "id": "header-two",
+      "label": "Header 2",
+      "default": "USA"
+    },
+    {
+      "type": "richtext",
+      "id": "body-two",
+      "label": "Info"
+    },
+    {
+      "type": "text",
+      "id": "header-three",
+      "label": "Header 3",
+      "default": "Canada"
+    },
+    {
+      "type": "richtext",
+      "id": "body-three",
+      "label": "Info"
+    }
+    ],
+    "blocks": [
+      {
+      "name": "Item",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Store Name"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Link Label",
+          "default": "Visit store"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+    ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stockist Table",
+      "category": "New"
+    }
+  ]
+  }
+{% endschema %}

@@ -1,0 +1,104 @@
+.main-inform {
+  &__content {
+    strong {
+      font-family: 'Meshed Display';
+      font-size: 48px;
+      line-height: 64px;
+      text-align: center;
+      letter-spacing: 1px;
+      display: block;
+      text-transform: capitalize!important;
+      font-weight: 400;
+
+      @include media-breakpoint-down(sm){
+        font-size: 30px;
+        line-height: 138.7%;
+      }
+    }
+    span {
+      @include media-breakpoint-down(sm){
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    p {
+      u{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 144.34%;
+        letter-spacing: 1px;
+      }
+      a {
+        color: #1E1E1E;
+        word-break: break-word;
+        &:hover {
+          transition: 0.3s;
+          color: #DDA101;
+        }
+      }
+    }
+    ul {
+      line-height: 150%;
+      li{
+        strong {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          text-align: left;
+          display: contents;
+        }
+        a {
+          color: #1E1E1E;
+          word-break: break-word;
+
+          &:hover {
+            transition: 0.3s;
+            color: #DDA101;
+          }
+        }
+      }
+    }
+    a {
+      color: #1E1E1E;
+      word-break: break-word;
+      &:hover {
+        transition: 0.3s;
+        color: #DDA101;
+      }
+    }
+    h1, h2 {
+      font-size: 48px;
+      line-height: 64px;
+
+      @include media-breakpoint-down(sm){
+        font-size: 30px;
+        line-height: 138.7%;
+      }
+    }
+    table {
+      width: 100%;
+      th {
+        strong {
+          font-family: 'SF Pro Text';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 144.34%;
+          letter-spacing: 1px;
+          @include media-breakpoint-down(sm){
+            font-size: 16px;
+          }
+        }
+      }
+      td {
+        font-size: 16px;
+        line-height: 150%;
+        @include media-breakpoint-down(sm){
+          font-size: 14px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}

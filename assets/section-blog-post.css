@@ -1,0 +1,343 @@
+/*.article-template > *:first-child:not(.article-template__hero-container) {
+  margin-top: 5rem;
+}*/
+
+
+.article-template__top {
+  border-bottom: 1px solid #1E1E1E;
+}
+
+.article-template__top > .container-small{
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1248px;
+}
+
+.article-template__block {
+  width: 50%;
+  max-width: 50%;
+  padding-right: 26px;
+}
+
+.article-template > .container-full {
+  width: 100%;
+  position: relative;
+}
+
+.article-template__img {
+  width: 100%;
+  justify-content: flex-end;
+  min-height: 551px;
+}
+
+.article-template__img > img {
+  object-fit: cover;
+  height: inherit;
+  width: 50%;
+  max-width: 50%;
+  max-height: 551px;
+}
+
+.article-template__date {
+  font-family: 'Meshed Display';
+}
+
+.article-template__share-btn {
+  background: #F4DD94;
+  border-radius: 69px;
+  width: 44px;
+  height: 44px;
+  transition: 0.3s;
+  border: none;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.article-template__share-btn > svg {
+  max-width: 20px;
+  height: auto;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.btn-active {
+  border: solid 1px #DDA101;
+  color: #DDA101;
+}
+
+.article-template__share-btn:hover{
+  background: #FFFFFF;
+}
+
+.article-template__inform {
+  margin: 36px auto 23px;
+
+  color: #1E1E1E;
+}
+
+.article-template__inform > p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 157.84%;
+  font-family: 'SF Pro Text';
+}
+
+.article-template__inform  > h2 {
+  font-size: 32px;
+  line-height: 45px;
+  letter-spacing: 1px;
+}
+
+.article-template__inform > h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  font-family: 'SF Pro Text' !important;
+}
+
+.article-template__inform > ul {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.article-template__inform > ul > li > p > a {
+  font-weight: 600;
+  color: #DDA101 !important;
+  text-decoration: none;
+}
+
+.article-template__inform > p > a {
+  font-weight: 600;
+  color: #DDA101 !important;
+  text-decoration: none;
+}
+
+.article-template__hero-container {
+  max-width: 130rem;
+  margin: 0 auto;
+
+  width: 720px;
+  height: 551px;
+}
+
+.article-template__hero-small {
+  height: 11rem;
+}
+
+.article-template__hero-medium {
+  height: 22rem;
+}
+
+.article-template__hero-large {
+  height: 33rem;
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .article-template__hero-small {
+    height: 22rem;
+  }
+
+  .article-template__hero-medium {
+    height: 44rem;
+  }
+
+  .article-template__hero-large {
+    height: 66rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .article-template__hero-small {
+    height: 27.5rem;
+  }
+
+  .article-template__hero-medium {
+    height: 55rem;
+  }
+
+  .article-template__hero-large {
+    height: 82.5rem;
+  }
+}
+
+.article-template header {
+  margin-top: 4.4rem;
+  margin-bottom: 2rem;
+  line-height: calc(0.8 / var(--font-body-scale));
+}
+
+/*@media screen and (min-width: 750px) {
+  .article-template header {
+    margin-top: 5rem;
+  }
+}*/
+
+.article-template__title {
+  margin: 6px 0 22px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #D8D5CE;
+}
+/*
+.article-template__title:not(:only-child) {
+  margin-bottom: 1rem;
+}*/
+
+.article-template__link {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.article-template__link .icon-wrap {
+  display: flex;
+  margin-right: 1rem;
+  transform: rotate(180deg);
+}
+
+.article-template__content {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.article-template__social-sharing {
+  margin-top: 3rem;
+}
+
+.article-template__social-sharing + header,
+.article-template__social-sharing + .article-template__content {
+  margin-top: 1.5rem;
+}
+
+.article-template__comment-wrapper {
+  margin-top: 5rem;
+  padding: 2.7rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comment-wrapper {
+    margin-top: 6rem;
+    padding: 3.6rem 0;
+  }
+}
+
+.article-template__comment-wrapper h2 {
+  margin-top: 0;
+}
+
+.article-template__comments {
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comments {
+    margin-bottom: 7rem;
+  }
+}
+
+.article-template__comments-fields {
+  margin-bottom: 4rem;
+}
+
+.article-template__comments-comment {
+  color: rgba(var(--color-foreground), 0.75);
+  background-color: rgb(var(--color-background));
+  margin-bottom: 1.5rem;
+  padding: 2rem 2rem 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comments-comment {
+    padding: 2rem 2.5rem;
+  }
+}
+
+.article-template__comments-comment p {
+  margin: 0 0 1rem;
+}
+
+.article-template__comment-fields > * {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comment-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+  }
+}
+
+.article-template__comment-warning {
+  margin: 2rem 0 2.5rem;
+}
+
+@media screen and (min-width: 990px) {
+  .article-template__comments .pagination-wrapper {
+    margin: 5rem 0 8rem;
+  }
+}
+
+.article-template__back:last-child {
+  margin-bottom: 3.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .article-template__block {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    margin: 32px 0 20px;
+  }
+
+  .article-template__top > .container-small{
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .article-template__title {
+    margin: 0 0 20px;
+    padding-bottom: 18px;
+    font-size: 30px;
+    line-height: 138.7%;
+  }
+
+  .article-template__img {
+    min-height: 288px;
+  }
+
+  .article-template__img > img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .article-template__inform>p {
+    font-size: 20px;
+    line-height: 157.84%;
+  }
+
+  .article-template__inform>ul {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .article-template__inform  > h2 {
+    font-size: 26px;
+    line-height: 138.7%;
+  }
+
+  .article-template__inform > h3 {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}

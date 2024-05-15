@@ -1,0 +1,115 @@
+<style>
+    {% if section.settings.enable_custom-sort %}
+        @media (max-width: 767px) {
+            .custom-sort__sort {
+                display: block !important;
+            }
+        }
+    {% else %}
+    @media (max-width: 767px) {
+        .custom-sort__sort {
+            display: none !important;
+        }
+    }
+    {% endif %}
+</style>
+
+<div class="custom-sort">
+    <div class="container d-flex justify-content-between">
+        <div class="custom-sort__nav d-flex flex-wrap">
+            {% for link in linklists[section.settings.link_list].links %}
+                <a  class="button__round {% if link.current %} current{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a>
+            {% endfor %}
+        </div>
+        <div class="custom-sort__mob-nav">
+            <select class="select2-collection custom-select mb-5" name="" id="collection-by" onchange="location = this.value;">
+                {% for link in linklists[section.settings.link_list].links %}
+                    <option {%- if link.current %} selected="selected" {% endif %} value="{{ link.url }}">
+                        {{ link.title | escape }}
+                    </option>
+                {%- endfor -%}
+            </select>
+        </div>
+        <div class="custom-sort__sort">
+            <select class="select2-sort custom-select" id="sort-by">
+                {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+                {% for option in collection.sort_options %}
+                    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+                        {{ option.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <script>
+            Shopify.queryParams = {};
+
+            // Preserve existing query parameters
+            if (location.search.length) {
+                var params = location.search.substr(1).split('&');
+
+                for (var i = 0; i < params.length; i++) {
+                    var keyValue = params[i].split('=');
+
+                    if (keyValue.length) {
+                        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+                    }
+                }
+            }
+
+            // Update sort_by query parameter on select change
+            document.querySelector('#sort-by').addEventListener('change', function(e) {
+                var value = e.target.value;
+
+                Shopify.queryParams.sort_by = value;
+                location.search = new URLSearchParams(Shopify.queryParams).toString();
+            });
+        </script>
+    </div>
+</div>
+
+<div id="ProductGridContainer">
+    {% paginate collection.products by 49 %}
+        <section class="shop" id="product-grid" data-id="{{ section.id }}">
+            <div class="collection container">
+                <div class="shop__position d-flex flex-wrap">
+                    {% for product in collection.products %}
+                        {%- render 'product-card-new' product: product, results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices -%}
+                    {% endfor %}
+                    {%- if paginate.pages > 1 -%}
+                        {% render 'pagination', paginate: paginate, anchor: '' %}
+                    {%- endif -%}
+                </div>
+            </div>
+        </section>
+
+    {% endpaginate %}
+</div>
+
+
+{% schema %}
+    {
+    "name": "Custom Collection",
+    "class": "spaced-section collection-grid-section",
+    "settings": [
+    {
+        "type": "checkbox",
+        "id": "enable_custom-sort",
+        "default": false,
+        "label": "Enable Sorting on Mobile"
+    },
+    {
+        "type": "link_list",
+        "id": "link_list",
+        "label": "Choose a link list"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Custom Collection",
+    "category": "New"
+    }
+    ]
+    }
+{% endschema %}
+

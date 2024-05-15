@@ -1,0 +1,94 @@
+.advantages-mod {
+  padding: 95px 0 100px;
+  border-top: solid 1px $c-text;
+  @include media-breakpoint-down(sm) {
+    padding: 48px 0;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 1px;
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+      line-height: 138.7%;
+      text-align: center;
+    }
+  }
+  &__bg {
+    background: #FFFFFF;
+  }
+  &__wrapper {
+    align-items: flex-start;
+    @media (max-width: 1199px) {
+      align-items: flex-start;
+    }
+  }
+  &__tile-box {
+    width: 20%;
+    @media (max-width: 1199px) {
+      width: 33.333%;
+      padding: 0 12px;
+    }
+    @include media-breakpoint-down(sm){
+      width: 50%;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 0 6px;
+    }
+  }
+  &__tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      .advantages-mod__img {
+        opacity: 0 !important;
+      }
+      .advantages-mod__hover-img {
+        opacity: 1 !important;
+      }
+    }
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 144.34%;
+      @media (max-width: 1199px) {
+        margin-bottom: 38px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        line-height: 144.34%;
+      }
+    }
+  }
+  &__img {
+    transition: 0.3s;
+    opacity: 1;
+  }
+  &__tile-hover {
+    position: relative;
+    max-height: 85px;
+    height: 85px;
+  }
+  &__hover-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  &__btn {
+    margin: 24px 0 0;
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto 35px;
+      max-width: 345px;
+      width: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      max-width: 100%;
+    }
+  }
+}

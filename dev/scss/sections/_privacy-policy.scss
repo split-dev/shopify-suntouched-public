@@ -1,0 +1,28 @@
+.privacy-policy {
+  .top-banner__text {
+    max-width: 802px;
+  }
+
+  .advantages {
+    margin-top: 32px;
+    border-top: 1px solid #1E1E1E;
+    border-bottom: 1px solid #1E1E1E;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      line-height: 150%;
+      margin-top: 55px;
+    }
+  }
+  .main-inform__content {
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+    h1, h2 {
+      margin-top: 80px;
+      padding-left: 0 !important;
+      @include media-breakpoint-down(sm) {
+        margin-top: 60px;
+      }
+    }
+  }
+}

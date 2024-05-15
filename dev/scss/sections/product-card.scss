@@ -1,0 +1,121 @@
+.product-card {
+  a {
+    position: relative;
+    text-decoration: none !important;
+    &:hover {
+      .product-card__title {
+        color: $c-orange;
+      }
+    }
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px !important;
+    }
+  }
+  &__img {
+    height: 340px;
+    @include media-breakpoint-down(sm) {
+      height: 250px;
+    }
+    @include media-breakpoint-down(xs) {
+      height: 175px;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__badge {
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    z-index: 2;
+    @include media-breakpoint-down(sm) {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      top: -15px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__buttons {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    border-top: solid 1px #a3a19d;
+    padding-top: 8px;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+    button {
+      font-family: "SF Pro Text" !important;
+      box-shadow: none !important;
+      background: transparent !important;
+      color: $c-text !important;
+      border: none !important;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      transition: 0.3s;
+      cursor: pointer;
+      padding: 0 0 0 10px;
+      @include media-breakpoint-down(sm) {
+        font-size: 14px !important;
+      }
+      &:hover {
+        color: $c-orange !important;
+      }
+    }
+  }
+  &__sold {
+    font-size: 16px;
+    line-height: 150%;
+    padding: 0 0 0 10px;
+    @include media-breakpoint-down(sm) {
+      font-size: 14px !important;
+    }
+  }
+  .jdgm-widget {
+    display: none !important;
+  }
+}
+
+
+/* ===============================================
+// Reveal module
+// =============================================== */
+
+.reveal .hidden { display: block !important; visibility: visible !important;}
+.product-card a:hover .reveal img { opacity: 1; }
+.reveal { position: relative; }
+.reveal .hidden {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.product-card a:hover .hidden {
+  z-index: 2;
+  opacity: 1;
+}

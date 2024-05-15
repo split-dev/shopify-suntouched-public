@@ -1,0 +1,46 @@
+<div  class="product-card d-flex flex-column justify-content-between">
+    <a href="{{ product.url }}" class="d-block">
+        {% if product.featured_image %}
+            <span class="product-card__img d-block reveal">
+              <img src="{{ product.featured_image | img_url: '450x' }}" alt="{{ product.featured_image.alt }}">
+              <img class="hidden" src="{{ product.images.last | img_url: '450x' }}" alt="{{ product.images.last.alt | escape }}" />
+            </span>
+        {% endif %}
+        <span class="product-card__title color-text d-block">{{ product.title }}</span>
+      {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+        {% if product.tags contains 'bestseller' %}
+            {% if settings.badge-first %}
+                <span class="product-card__badge d-block">
+                    <img src="{{ settings.badge-first | img_url: '90x' }}" alt="{{ settings.badge-first.alt }}">
+                </span>
+            {% endif %}
+        {% endif %}
+        {% if product.tags contains 'new' %}
+            {% if settings.badge-second %}
+                <span class="product-card__badge d-block">
+                    <img src="{{ settings.badge-second | img_url: '90x' }}" alt="{{ settings.badge-second.alt }}">
+                </span>
+            {% endif %}
+        {% endif %}
+    </a>
+    <span class="product-card__buttons d-flex justify-content-between">
+        <span class="d-block color-text">{{ product.price | money }}</span>
+        <span class="d-block">
+          {% if product.available %}
+              {% form 'product', product %}
+                  <input class="d-none"
+                         value="{{ product.selected_or_first_available_variant.id }}"
+                         name="id">
+                  <input class="d-none"
+                         type="text"
+                         value="1"
+                         name="quantity">
+                  <button class=""
+                          type="submit">ADD TO BAG</button>
+              {% endform %}
+          {% else %}
+              <span class="product-card__sold d-block text-color text-uppercase font-weight-semibold">Sold Out</span>
+          {% endif %}
+        </span>
+    </span>
+</div>

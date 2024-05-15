@@ -1,0 +1,64 @@
+<style>
+    .bg-img-text__bg {
+        background-image: url('{{ section.settings.image-bg | img_url: 'master' }}');
+    }
+    {% if section.settings.image-bg_mob %}
+    @media (max-width: 767px) {
+        .bg-img-text__bg {
+            background-image: url('{{ section.settings.image-bg_mob | img_url: 'master' }}');
+        }
+    }
+    {% endif %}
+</style>
+<div class="bg-img-text">
+    <div class="container">
+        <div class="bg-img-text__bg">
+            <div class="bg-img-text__content d-flex flex-column align-items-center justify-content-center">
+                <h2 class="h2 m-0 bg-img-text__title text-center">{{ section.settings.title }}</h2>
+                {% if section.settings.link_text != blank %}
+                    <a class="button__gold bg-img-text__btn text-decoration-none" href="{{ section.settings.link }}">{{ section.settings.link_text }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Bg image and text",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image-bg",
+            "label": "BG Image mob"
+        },
+        {
+            "type": "image_picker",
+            "id": "image-bg_mob",
+            "label": "BG Image mob"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title Text"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+        },
+        {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Bg image and text",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

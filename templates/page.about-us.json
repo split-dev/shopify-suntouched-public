@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "16554563590795d109": {
+      "type": "text-image-small",
+      "settings": {
+        "title": "Summer State of Mind",
+        "text": "<p>Suntouched is an effortless approach to hair lightening treatments. We’ve developed a way to hold onto sun-kissed summer hair year-round with clean and hydrating hair lightening sprays. For Suntouched, Summer isn’t a season, it's a state of mind<\/p>",
+        "image": "shopify:\/\/shop_images\/Rectangle_8_83d3913a-5f97-4aa1-8b30-b593d84713d8.png",
+        "enable-buttons": false
+      }
+    },
+    "1655456401e6a1d485": {
+      "type": "text-image-small",
+      "settings": {
+        "title": "Meet Our Founder",
+        "text": "<p>Our founder, Charlotte's inspiration for Suntouched began in Crete, Greece. She loved seeing the natural brightening effect the sun had on her friends and herself; bringing out everyone's natural beauty and appreciation for life. She returned to Canada with a desire to bring this “sunshine in a bottle” to the world. <br\/><br\/>Suntouched was born out of the vision to create a range of effective, clean, and sustainable, and effective lightening sprays for all hair types and shades. Today, Suntouched allows customers to feel like their summer selves year-round.<\/p>",
+        "image": "shopify:\/\/shop_images\/IMG_0224_bbe4bf9e-debd-40fc-8a2f-4991eef8b52d.png",
+        "enable-buttons": true
+      }
+    },
+    "1654591494d2c76e45": {
+      "type": "ticker",
+      "settings": {
+        "color": "#1e1e1e",
+        "color-text": "#ffffff",
+        "word-one": "&nbsp;&nbsp;Suntouched&nbsp;&nbsp;    •",
+        "word-two": "&nbsp;&nbsp;Sunshine in a bottle &nbsp;&nbsp;   •"
+      }
+    },
+    "165545644311a1ee55": {
+      "type": "title-text-image",
+      "settings": {
+        "title": "What We Believe In",
+        "image": "shopify:\/\/shop_images\/Frame_57.png"
+      }
+    },
+    "1654595411dc80a787": {
+      "type": "inst-block",
+      "settings": {
+        "title": "Join the Suntouched family on IG",
+        "inst": "@suntouched"
+      }
+    },
+    "1654689881deb9c70d": {
+      "type": "title-and-images",
+      "blocks": {
+        "ca8e6816-ebfa-43d2-a687-078818f599e1": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_group_8746f306-9c75-450d-ac45-5985c6dd87c2.png"
+          }
+        },
+        "473cf909-776d-460d-84da-14caad605fcc": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Mask_group_bed07e7f-7f78-46e4-94f2-914e1ccc7668.png"
+          }
+        },
+        "b89a3023-13d7-4e77-b1ee-a48118a8c559": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Brit_Co_logo.png"
+          }
+        },
+        "ff6d4635-741e-421b-8587-72752d246137": {
+          "type": "text",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/KS-Opumo_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "ca8e6816-ebfa-43d2-a687-078818f599e1",
+        "473cf909-776d-460d-84da-14caad605fcc",
+        "b89a3023-13d7-4e77-b1ee-a48118a8c559",
+        "ff6d4635-741e-421b-8587-72752d246137"
+      ],
+      "settings": {
+        "title": "As Seen In"
+      }
+    }
+  },
+  "order": [
+    "16554563590795d109",
+    "1655456401e6a1d485",
+    "1654591494d2c76e45",
+    "165545644311a1ee55",
+    "1654595411dc80a787",
+    "1654689881deb9c70d"
+  ]
+}

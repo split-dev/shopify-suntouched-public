@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "16564891762dd2fba7": {
+      "type": "text-image",
+      "settings": {
+        "title": "Hair quiz",
+        "text": "<p>We want you to live your best summer hair and that means using the right products. Take our quick hair quiz to find the Sunseeker set that’s best for you.<\/p>",
+        "link": "shopify:\/\/pages\/quiz-question",
+        "link_text": "START THE QUIZ",
+        "image": "shopify:\/\/shop_images\/pexels-joao-victor-valeriote-12487156_1.jpg",
+        "enable-buttons": true
+      }
+    },
+    "165660601429daeccb": {
+      "type": "cta",
+      "settings": {
+        "img-desktop": "shopify:\/\/shop_images\/IMG_0389.jpg",
+        "img-mobile": "shopify:\/\/shop_images\/IMG_0389.jpg",
+        "title": "Summer in a Hair Lightening Spray",
+        "url": "shopify:\/\/collections",
+        "label": "view our products"
+      }
+    },
+    "16564892134ecf6bbe": {
+      "type": "inst-block",
+      "settings": {
+        "title": "Join the Suntouched family on IG",
+        "inst": "@suntouched"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16564891762dd2fba7",
+    "165660601429daeccb",
+    "16564892134ecf6bbe"
+  ]
+}

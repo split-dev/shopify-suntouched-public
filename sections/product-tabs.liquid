@@ -1,0 +1,354 @@
+<section class="product-tabs">
+    {% assign scope = product.metafields.airf %}
+    {% assign bundle_s = scope.bundle_s %}
+    <div class="product-tabs__position">
+      <div class="product-tabs__nav tab">
+        <div class="container">
+          <div class="product-nav__position product-tabs-slider-init">
+            <div class="swiper-wrapper">
+              {% if section.settings.title %}
+                <div class="swiper-slide tablinks d-flex  active" onclick="openTestimonial(event, '{{ section.settings.title }}')">
+                  <div class="d-flex justify-content-center flex-column">
+                    <h5 class="">{{ section.settings.title }}</h5>
+                  </div>
+                </div>
+              {% endif %}
+              {% if section.settings.title_2 %}
+                <div class="swiper-slide tablinks d-flex  " onclick="openTestimonial(event, '{{ section.settings.title_2 }}')">
+                  <div class="d-flex justify-content-center flex-column">
+                    <h5 class="">{{ section.settings.title_2 }}</h5>
+                  </div>
+                </div>
+              {% endif %}
+              {% if section.settings.title_3 %}
+                <div class="swiper-slide tablinks d-flex  " onclick="openTestimonial(event, '{{ section.settings.title_3 }}')">
+                  <div class="d-flex justify-content-center flex-column">
+                    <h5 class="">{{ section.settings.title_3 }}</h5>
+                  </div>
+                </div>
+              {% endif %}
+              {% if section.settings.title_4 %}
+                <div class="swiper-slide tablinks d-flex" onclick="openTestimonial(event, '{{ section.settings.title_4 }}')">
+                  <div class="d-flex justify-content-center flex-column">
+                    <h5 class="">{{ section.settings.title_4 }}</h5>
+                  </div>
+                </div>
+              {% endif %}
+              {% if section.settings.title_5 %}
+                <div class="swiper-slide tablinks d-flex" onclick="openTestimonial(event, '{{ section.settings.title_5 }}')">
+                  <div class="d-flex justify-content-center flex-column">
+                    <h5 class="">{{ section.settings.title_5 }}</h5>
+                  </div>
+                </div>
+              {% endif %}
+              {% if section.settings.title_6 %}
+                {% if bundle_s != blank %}
+                <div class="swiper-slide tablinks d-flex " onclick="openTestimonial(event, '{{ section.settings.title_6 }}')">
+                  <div class="d-flex justify-content-center flex-column">
+                    <h5 class="">{{ section.settings.title_6 }}</h5>
+                  </div>
+                </div>
+              {% endif %}
+              {% endif %}
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="product-tabs__content">
+        <div class="container">
+          {% if section.settings.title %}
+          <div id="{{ section.settings.title }}" class="tabcontent">
+              <div class="who-its-for__wrapper">
+                  {% assign scope = product.metafields.airf %}
+                  {% assign who_its_fo = scope.who_its_fo %}
+                  {%- assign slider_reviews_count = 0 -%}
+                  {%- for row in who_its_fo.rows -%}
+                      {%- assign slider_reviews_count = slider_reviews_count | plus: 1 -%}
+                  {%- endfor -%}
+                  {% if slider_reviews_count == 5 %}
+
+                  {% endif %}
+                  {% if who_its_fo != blank %}
+                      {% for row in who_its_fo.rows %}
+                          <div class="who-its-for__tile d-flex flex-column align-items-center" style="background-image: url('{{ scope[row[0].key] }}')">
+                              <h4 class="text-center color-text">{{ scope[row[1].key] }}</h4>
+                              <p class="text-center color-text">{{ scope[row[2].key] }}</p>
+                          </div>
+                      {% endfor %}
+                  {% endif %}
+              </div>
+          </div>
+          {% endif %}
+          {% if section.settings.title_2 %}
+            <div id="{{ section.settings.title_2 }}" class="how-to-use tabcontent flex-column">
+                {% assign title_prod = product.metafields.airf.title_prod %}
+                {% if title_prod and title_prod != '&nbsp' %}
+                    <h2>{{ title_prod }}</h2>
+                {% endif %}
+                <div class="how-to-use__wrapper d-flex flex-wrap justify-content-between">
+                    {% assign scope = product.metafields.airf %}
+                    {% assign instructio = scope.instructio %}
+                    {% if instructio != blank %}
+                        {% for row in instructio.rows %}
+                            <div class="how-to-use__tile d-flex flex-column align-items-center">
+                                <img class="product-tabs__content-key-img" src="{{ scope[row[0].key] }}" />
+                                <h4 class="text-center color-text">{{ scope[row[1].key] }}</h4>
+                                <div class="text-center color-text">{{ scope[row[2].key] }}</div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% assign title_pro2 = product.metafields.airf.title_pro2 %}
+                {% if title_pro2 and title_pro2 != '&nbsp' %}
+                    <h2>{{ title_pro2 }}</h2>
+                {% endif %}
+                {% assign scope = product.metafields.airf %}
+                {% assign instructi2 = scope.instructi2 %}
+                {% if instructi2 != blank %}
+                <div class="how-to-use__wrapper d-flex flex-wrap justify-content-between">
+                    {% for row in instructi2.rows %}
+                        <div class="how-to-use__tile d-flex flex-column align-items-center">
+                            <img class="product-tabs__content-key-img" src="{{ scope[row[0].key] }}" />
+                            <h4 class="text-center color-text">{{ scope[row[1].key] }}</h4>
+                            <div class="text-center color-text">{{ scope[row[2].key] }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+          {% endif %}
+          {% if section.settings.title_3 %}
+            <div id="{{ section.settings.title_3 }}" class="tabcontent justify-content-center">
+                <div class="advantages-mod__wrapper d-flex flex-wrap justify-content-center">
+                    {% for block in section.blocks %}
+                        {% if block.settings.img %}
+                            <div class="advantages-mod__tile-box d-flex justify-content-center">
+                                <div class="advantages-mod__tile">
+                                    <div class="advantages-mod__tile-hover">
+                                        <img class="advantages-mod__img" loading="lazy" src="{{ block.settings.img | img_url: '90x' }}" alt="{{ block.settings.img.alt }}">
+                                        {% if block.settings.hover-img %}
+                                            <img class="advantages-mod__hover-img" loading="lazy" src="{{ block.settings.hover-img | img_url: '90x' }}" alt="{{ block.settings.hover-img.alt }}">
+                                        {% else %}
+                                            <img class="advantages-mod__hover-img" loading="lazy" src="{{ block.settings.img | img_url: '90x' }}" alt="{{ block.settings.img.alt }}">
+                                        {% endif %}
+                                    </div>
+                                    <p class="text-center color-text">{{ block.settings.text }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+          {% endif %}
+          {% if section.settings.title_4 %}
+            <div id="{{ section.settings.title_4 }}" class="tabcontent flex-column">
+
+                {% assign title_b1 = product.metafields.airf.title_b1 %}
+                {% if title_b1 and title_b1 != '&nbsp' %}
+                    <h2>{{ title_b1 }}</h2>
+                {% endif %}
+
+                {% assign scope = product.metafields.airf %}
+                {% assign key_ingred = scope.key_ingred %}
+                {% if key_ingred != blank %}
+                    <div class="product-tabs__content-key d-flex flex-wrap justify-content-left">
+                        {% for row in key_ingred.rows %}
+                            <div class="product-tabs__content-key-tile d-flex">
+                                <div class="product-tabs__content-key-tile-hover">
+                                    <img class="product-tabs__content-key-img" src="{{ scope[row[2].key] }}" />
+                                    {% if scope[row[3].key] != blank %}
+                                        <img class="product-tabs__content-key-hover-img" src="{{ scope[row[3].key] }}" />
+                                    {% else %}
+                                        <img class="product-tabs__content-key-img" src="{{ scope[row[2].key] }}" />
+                                    {% endif %}
+                                </div>
+                                <div class="product-tabs__content-key-info">
+                                    <span class="color-text">{{ scope[row[0].key] }}</span>
+                                    <p class="color-text">{{ scope[row[1].key] }}</p>
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+
+                {% assign title_b2 = product.metafields.airf.title_b2 %}
+                {% if title_b2 and title_b2 != '&nbsp' %}
+                    <h2>{{ title_b2 }}</h2>
+                {% endif %}
+
+
+                {% assign scope = product.metafields.airf %}
+                {% assign ingred_2 = scope.ingred_2 %}
+                {% if ingred_2 != blank %}
+                    <div class="product-tabs__content-key d-flex flex-wrap justify-content-left">
+                        {% for row in ingred_2.rows %}
+                            <div class="product-tabs__content-key-tile d-flex">
+                                <div class="product-tabs__content-key-tile-hover">
+                                    <img class="product-tabs__content-key-img" src="{{ scope[row[2].key] }}" />
+                                    {% if scope[row[3].key] != blank %}
+                                        <img class="product-tabs__content-key-hover-img" src="{{ scope[row[3].key] }}" />
+                                    {% else %}
+                                        <img class="product-tabs__content-key-img" src="{{ scope[row[2].key] }}" />
+                                    {% endif %}
+                                </div>
+                                <div class="product-tabs__content-key-info">
+                                    <span class="color-text">{{ scope[row[0].key] }}</span>
+                                    <p class="color-text">{{ scope[row[1].key] }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+            </div>
+          {% endif %}
+          {% if section.settings.title_5 %}
+            <div id="{{ section.settings.title_5 }}" class="tabcontent justify-content-center">
+                <div class="product-tabs__content-ingredient">
+                    {% assign ingredient = product.metafields.airf.ingredient %}
+                    {% if ingredient and ingredient != '&nbsp' %}
+                        {{ ingredient }}
+                    {% endif %}
+                </div>
+            </div>
+          {% endif %}
+          {% if section.settings.title_6 %}
+          {% if bundle_s != blank %}
+            <div id="{{ section.settings.title_6 }}" class="tabcontent w-100">
+                    <div class="product-tabs__content-bundles d-flex justify-content-center w-100">
+                        {% for row in bundle_s.rows %}
+
+                            {% assign separator = "###" %}
+
+                            {% assign relp_related_handles = scope[row[0].key] | split: separator %}
+                            {% for handle in relp_related_handles %}
+                                <div  class="product-card d-flex flex-column justify-content-between w-100">
+                                    <a href="{{  all_products[handle].url  }}" class="d-block">
+                                        {% if all_products[handle].featured_image %}
+                                            <span class="product-card__img d-block reveal">
+                                              <img src="{{ all_products[handle].featured_image | img_url: '450x' }}" alt="{{ all_products[handle].featured_image.alt }}">
+                                              <img class="hidden" src="{{ all_products[handle].images.last | img_url: '450x' }}" alt="{{ all_products[handle].images.last.alt | escape }}" />
+                                            </span>
+                                        {% endif %}
+                                        <span class="product-card__title color-text d-block">{{ all_products[handle].title }}</span>
+                                        {% if all_products[handle].tags contains 'bestseller' %}
+                                        {% if settings.badge-first %}
+                                            <span class="product-card__badge d-block">
+                                                <img src="{{ settings.badge-first | img_url: '90x' }}" alt="{{ settings.badge-first.alt }}">
+                                            </span>
+                                        {% endif %}
+                                        {% endif %}
+                                        {% if all_products[handle].tags contains 'new' %}
+                                            {% if settings.badge-second %}
+                                            <span class="product-card__badge d-block">
+                                                <img src="{{ settings.badge-second | img_url: '90x' }}" alt="{{ settings.badge-second.alt }}">
+                                            </span>
+                                        {% endif %}
+                                            {% endif %}
+                                    </a>
+                                    <span class="product-card__buttons d-flex justify-content-between">
+                                    <span class="d-block color-text">{{ all_products[handle].price | money }}</span>
+                                    <span class="d-block">
+                                      {% if all_products[handle].available %}
+                                          {% form 'product', product %}
+                                              <input class="d-none"
+                                                     value="{{ all_products[handle].selected_or_first_available_variant.id }}"
+                                                     name="id">
+                                              <input class="d-none"
+                                                     type="text"
+                                                     value="1"
+                                                     name="quantity">
+                                              <button class=""
+                                                      type="submit">ADD TO BAG</button>
+                                          {% endform %}
+                                      {% else %}
+                                          <span class="product-card__sold d-block text-color text-uppercase font-weight-semibold">Sold Out</span>
+                                      {% endif %}
+                                    </span>
+                                    </span>
+                                </div>
+                            {% endfor %}
+
+                        {% endfor %}
+                    </div>
+
+                </div>
+                {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{% schema %}
+  {
+  "name": "Product Tabs",
+  "settings": [
+      {
+      "type": "text",
+      "id": "title",
+      "label": "Tab Title 1"
+      },
+      {
+      "type": "text",
+      "id": "title_2",
+      "label": "Tab Title 2"
+      },
+      {
+      "type": "text",
+      "id": "title_3",
+      "label": "Tab Title 3"
+      },
+      {
+      "type": "text",
+      "id": "title_4",
+      "label": "Tab Title 4"
+      },
+      {
+      "type": "text",
+      "id": "title_5",
+      "label": "Tab Title 5"
+      },
+      {
+      "type": "text",
+      "id": "title_6",
+      "label": "Tab Title 6"
+      }
+    ],
+    "blocks": [
+        {
+        "name": "Item",
+        "type": "text",
+        "limit": 5,
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "hover-img",
+            "label": "Hover Image"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+        }
+    ]
+    }
+    ],
+  "presets": [
+    {
+      "name": "Product Tabs",
+      "category": "New"
+    }
+  ]
+  }
+{% endschema %}

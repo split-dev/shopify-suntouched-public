@@ -1,0 +1,53 @@
+<style>
+    .banner-img{
+        {% if section.settings.image %}
+            background-image: url('{{ section.settings.image | img_url: 'master' }}');
+        {% endif %}
+    }
+
+    {% if section.settings.image-mob %}
+    @media (max-width: 767px) {
+        .banner-img {
+            background-image: url('{{ section.settings.image-mob | img_url: 'master' }}');
+        }
+    }
+    {% endif %}
+</style>
+
+<div class="banner-img">
+    {% if section.settings.image_logo %}
+        <div class="banner-img__content d-flex align-items-center justify-content-center ">
+            <img src="{{ section.settings.image_logo | img_url: 'master' }}" alt="">
+        </div>
+    {% endif %}
+</div>
+
+{% schema %}
+{
+    "name": "Image center logo",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "BG desktopge"
+        },
+        {
+            "type": "image_picker",
+            "id": "image-mob",
+            "label": "BG mobile"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_logo",
+            "label": "Image logo"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image center logo",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}

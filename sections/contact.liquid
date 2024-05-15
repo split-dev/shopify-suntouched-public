@@ -1,0 +1,179 @@
+<div class="contact-wrapper position-relative">
+    <div class="container-small">
+            <div class="contact-wrapper__block">
+                <div class="contact-wrapper__content position-relative">
+                        <h1 class="contact-wrapper__title">{{ page.title }}</h1>
+                        <span class="contact-wrapper__text">{{ section.settings.text }}</span>
+                        {% if section.settings.link_text != blank %}
+                            <a class="button__gold contact-wrapper__btn text-decoration-none" href="{{ section.settings.link }}">{{ section.settings.link_text }}</a>
+                        {% endif %}
+                    </div>
+                <div class="contact-wrapper__inform d-md-flex d-block">
+                        <div class="d-flex d-md-block">
+                            <div class="contact-wrapper__inform__block">
+                                <p class="contact-wrapper__inform__title text-18px font-weight-semibold">{{ section.settings.title }}</p>
+                                <span class="contact-wrapper__inform__text text-16px">{{ section.settings.text_social }}</span>
+                            </div>
+                            <div>
+                                <p class="contact-wrapper__inform__title text-18px font-weight-semibold">{{ section.settings.title_2 }}</p>
+                                <span class="contact-wrapper__inform__text text-16px">{{ section.settings.text_social_2 }}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="contact-wrapper__inform__title text-18px font-weight-semibold">{{ section.settings.title_3 }}</p>
+                            <ul class="contact-wrapper__list-social list-unstyled d-flex flex-wrap" role="list">
+                                {%- if settings.social_facebook_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                                            {%- render 'icon-facebook' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_instagram_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                                            {%- render 'icon-instagram' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_tiktok_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+                                            {%- render 'icon-tiktok' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_pinterest_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+                                            {%- render 'icon-pinterest' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_twitter_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
+                                            {%- render 'icon-twitter' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_tumblr_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+                                            {%- render 'icon-tumblr' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_snapchat_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+                                            {%- render 'icon-snapchat' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_youtube_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+                                            {%- render 'icon-youtube' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                                {%- if settings.social_vimeo_link != blank -%}
+                                    <li class="list-social__item">
+                                        <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+                                            {%- render 'icon-vimeo' -%}
+                                            <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                                        </a>
+                                    </li>
+                                {%- endif -%}
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+    </div>
+            <div class="container-full">
+                <div class="contact-wrapper__img d-flex">
+                    {% if section.settings.image %}
+                        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+
+
+</div>
+
+{% schema %}
+{
+    "name": "Contact",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+        },
+        {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+        },
+        {
+            "type": "header",
+            "content": "Left block inform"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title Text"
+        },
+        {
+            "type": "richtext",
+            "id": "text_social",
+            "label": "Text"
+        },
+        {
+            "type": "text",
+            "id": "title_2",
+            "label": "Title Text 2"
+        },
+        {
+            "type": "richtext",
+            "id": "text_social_2",
+            "label": "Text 2"
+        },
+        {
+            "type": "header",
+            "content": "Right block inform"
+        },
+        {
+            "type": "text",
+            "id": "title_3",
+            "label": "Title Text 3"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact",
+            "category": "New"
+        }
+    ]
+}
+{% endschema %}
